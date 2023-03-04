@@ -1,21 +1,17 @@
 <script setup lang="ts">
 import { useRouter } from "vue-router";
+import Button from "./components/Button/Button.vue";
 
 const router = useRouter();
 
 function homeRouter() {
-  router.push({ name: "home" });
+  alert("hey")
 }
 </script>
 
 <template>
   <div>
-    <button
-      @click="homeRouter"
-      class="bg-primary text-white py-2 px-5 rounded-md"
-    >
-      home
-    </button>
+    <Button title="test" color="primary" @click="homeRouter"/>
     <RouterView />
   </div>
 </template>
