@@ -10,7 +10,7 @@ defineEmits<{ (e: "onClick"): void }>();
     <button
       class="px-7 py-1 rounded drop-shadow-md font-medium"
       :class="{
-        'bg-primary hover:bg-blue text-white': color == 'primary',
+        'btn-standard': color == 'standard',
       }"
       @click="$emit('onClick')"
     >

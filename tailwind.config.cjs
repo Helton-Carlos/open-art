@@ -27,7 +27,7 @@ module.exports = {
       orange: "#ff7849",
     },
     fontFamily: {
-      sans: ["Graphik", "sans-serif"],
+      sans: ["ui-sans-serif", "system-ui", "sans-serif"],
       serif: ["Merriweather", "serif"],
     },
   },

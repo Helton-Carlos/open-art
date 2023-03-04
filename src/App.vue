@@ -11,7 +11,7 @@ function homeRouter() {
 
 <template>
   <div>
-    <Button title="test" color="primary" @click="homeRouter"/>
+    <Button title="test" color="standard" @click="homeRouter"/>
     <RouterView />
   </div>
 </template>
