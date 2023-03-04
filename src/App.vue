@@ -12,25 +12,10 @@ function homeRouter() {
   <div>
     <button
       @click="homeRouter"
-      class="bg-purple-700 text-white py-2 px-5 rounded-md"
+      class="bg-primary text-white py-2 px-5 rounded-md"
     >
       home
     </button>
     <RouterView />
   </div>
 </template>
-
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
