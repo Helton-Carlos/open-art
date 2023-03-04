@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useRouter } from "vue-router";
 
-const router = useRouter()
+const router = useRouter();
 
 function homeRouter() {
   router.push({ name: "home" });
@@ -10,7 +10,12 @@ function homeRouter() {
 
 <template>
   <div>
-    <button @click="homeRouter">home</button>
+    <button
+      @click="homeRouter"
+      class="bg-purple-700 text-white py-2 px-5 rounded-md"
+    >
+      home
+    </button>
     <RouterView />
   </div>
 </template>
