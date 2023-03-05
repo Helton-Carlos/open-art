@@ -5,6 +5,10 @@ const routes: Array<RouteRecordRaw> = [
     path: "/",
     name: "home",
     component: () => import("../pages/Home.vue"),
+    meta: {
+      title: "Discover, collect, and sell",
+      subTitle: "Your Digital Art",
+    },
   },
 ];
 

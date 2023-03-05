@@ -9,6 +9,13 @@ module.exports = {
       lg: "1280px",
       xl: "1440px",
     },
+    fontSize: {
+      sm: '0.875rem',
+      base: '1rem',
+      xl: '1.125rem',
+      '2xl': '1.5rem',
+      '3xl': '3rem',
+    },
     colors: {
       primary: "#002EF1",
       secondary: "#FFB802",
@@ -18,6 +25,7 @@ module.exports = {
       white: "#fff",
       green: "#5ed5a8",
       yellow: "#ffc82c",
+      black: "#14142B",
       gray: "#999fae",
       "gray-dark": "#273444",
       "gray-light": "#d3dce6",

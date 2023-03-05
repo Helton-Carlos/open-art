@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useRouter } from "vue-router";
-import Button from "./components/Button/Button.vue";
+import Navbar from "./components/Navbar/Navbar.vue";
 
 const router = useRouter();
 
@@ -11,7 +11,7 @@ function homeRouter() {
 
 <template>
   <div>
-    <Button title="test" color="standard" @click="homeRouter"/>
+    <Navbar/>
     <RouterView />
   </div>
 </template>
