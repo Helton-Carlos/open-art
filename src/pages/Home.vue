@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useRoute } from "vue-router";
+import Title from "../components/Title/Title.vue";
 
 const route = useRoute();
 
@@ -9,9 +10,6 @@ const subTitle = route.meta.subTitle;
 
 <template>
   <div class="w-11/12 my-4 text-center">
-    <div>
-      <p class="text-gray-dark text-xl">{{ title }}</p>
-      <p class="text-black font-black text-2xl">{{ subTitle }}</p>
-    </div>
+    <Title :title="title" :subTitle="subTitle" />
   </div>
 </template>
