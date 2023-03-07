@@ -1,6 +1,7 @@
 {
     "name": "Open-Art",
     "short_name": "Open-Art",
+    "start_url":"/",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
