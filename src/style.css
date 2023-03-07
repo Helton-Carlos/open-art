@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+span {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 .btn-standard {
   @apply bg-gradient-to-r from-primary to-blue text-white;
+}
+
+.card {
+  @apply p-4 mb-4 bg-white rounded-lg shadow-lg md:w-full cursor-pointer;
 }

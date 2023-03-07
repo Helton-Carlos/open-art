@@ -22,7 +22,7 @@ module.exports = {
       warning: "#FF6711",
       error: "#FE3F61",
       success: "#009846",
-      white: "#fff",
+      white: "#FFFFFF",
       green: "#5ed5a8",
       yellow: "#ffc82c",
       black: "#14142B",
