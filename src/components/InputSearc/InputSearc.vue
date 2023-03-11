@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { IInput } from "./IInput";
+import type { IInput } from "./Input";
 
 defineProps<IInput>();
 

@@ -8,6 +8,27 @@ const route = useRoute();
 
 const title = route.meta.title;
 const subTitle = route.meta.subTitle;
+
+const cards = [
+  {
+    title: "Silent Wave",
+    persona: "Creator",
+    imageMain: "src/assets/card/art01.png",
+    imagePersona: "src/assets/card/person.png",
+  },
+  {
+    title: "Silent Color",
+    persona: "Creator102",
+    imageMain: "src/assets/card/art02.png",
+    imagePersona: "src/assets/card/person.png",
+  },
+  {
+    title: "Pawel Czerwinski",
+    persona: "Pawel Czerwinski",
+    imageMain: "src/assets/card/art03.png",
+    imagePersona: "src/assets/card/person.png",
+  },
+];
 </script>
 
 <template>
@@ -20,6 +41,14 @@ const subTitle = route.meta.subTitle;
       modelValue="text"
     />
 
-    <Card />
+    <div v-for="(card, index) in cards" :key="index">
+      <Card
+        :title="card.title"
+        :persona="card.persona"
+        :imageMain="card.imageMain"
+        :imagePersona="card.imagePersona"
+      />
+    </div>
+    
   </div>
 </template>
