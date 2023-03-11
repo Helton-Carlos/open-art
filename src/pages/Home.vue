@@ -28,6 +28,12 @@ const cards = [
     imageMain: "src/assets/card/art03.png",
     imagePersona: "src/assets/card/person.png",
   },
+  {
+    title: "Silent Wave",
+    persona: "Creator",
+    imageMain: "src/assets/card/art01.png",
+    imagePersona: "src/assets/card/person.png",
+  },
 ];
 </script>
 
@@ -41,14 +47,14 @@ const cards = [
       modelValue="text"
     />
 
-    <div v-for="(card, index) in cards" :key="index">
-      <Card
-        :title="card.title"
-        :persona="card.persona"
-        :imageMain="card.imageMain"
-        :imagePersona="card.imagePersona"
-      />
+    <div class="sm:flex sm:justify-center sm:flex-wrap gap-6">
+        <Card
+          v-for="(card, index) in cards" :key="index"
+          :title="card.title"
+          :persona="card.persona"
+          :imageMain="card.imageMain"
+          :imagePersona="card.imagePersona"
+        />
     </div>
-    
   </div>
 </template>

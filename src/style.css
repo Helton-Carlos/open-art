@@ -23,5 +23,5 @@ span {
 }
 
 .card {
-  @apply p-4 mb-4 bg-white rounded-lg shadow-lg md:w-full cursor-pointer;
+  @apply p-4 mb-4 bg-white rounded-lg shadow-lg cursor-pointer;
 }

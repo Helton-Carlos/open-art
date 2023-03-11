@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "./",
     "target": "ESNext",
     "useDefineForClassFields": true,
     "module": "ESNext",
@@ -15,7 +15,6 @@
     "noEmit": true,
     "rootDir": ".",
     "paths": {
-      "rootDir": ".",
       "@vue/compat": ["packages/vue-compat/src"],
       "@vue/*": ["packages/*/src"],
       "vue": ["packages/vue/src"]

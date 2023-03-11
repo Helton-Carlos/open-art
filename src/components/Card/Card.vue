@@ -5,7 +5,7 @@ defineProps<ICard>();
 </script>
 
 <template>
-  <div class="card">
+  <div class="card w-full sm:w-[290px]">
     <div>
       <img :src="imageMain" :alt="title" class="w-full" />
     </div>
