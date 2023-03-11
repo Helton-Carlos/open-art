@@ -15,9 +15,8 @@
     "noEmit": true,
     "rootDir": ".",
     "paths": {
-      "@vue/compat": ["packages/vue-compat/src"],
-      "@vue/*": ["packages/*/src"],
-      "vue": ["packages/vue/src"]
+      "@/*": ["./src/*"],
+      "tailwind.config.js": ["./tailwind.config.cjs"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
