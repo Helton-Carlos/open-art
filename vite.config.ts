@@ -16,4 +16,8 @@ export default defineConfig({
       { find: "@/components", replacement: "/src/components" },
     ],
   },
+  test: {
+    globals: true,
+    environment: "jsdom",
+  },
 });
