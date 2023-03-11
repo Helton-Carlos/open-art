@@ -25,3 +25,7 @@ span {
 .card {
   @apply p-4 mb-4 bg-white rounded-lg shadow-lg cursor-pointer;
 }
+
+.menu {
+  @apply w-full h-full bg-white rounded-lg shadow-lg absolute;
+}
