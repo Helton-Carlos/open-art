@@ -45,6 +45,15 @@ const routes: Array<RouteRecordRaw> = [
       title: "Discover, collect, and sell",
       subTitle: "Contact",
     },
+  },
+  {
+    path: "/terms-services",
+    name: "terms-services",
+    component: () => import("../pages/TermsServices.vue"),
+    meta: {
+      title: "Discover, collect, and sell",
+      subTitle: "TermsServices",
+    },
   }
 ];
 
