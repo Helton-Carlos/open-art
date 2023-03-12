@@ -16,7 +16,7 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import("../pages/About.vue"),
     meta: {
       title: "Discover, collect, and sell",
-      subTitle: "About",
+      subTitle: "About OpenArt",
     },
   },
   {

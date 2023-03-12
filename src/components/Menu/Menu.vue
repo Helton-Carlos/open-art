@@ -8,10 +8,10 @@ function test() {
 }
 
 const router = [
-  { name:'About OpenArt', route: 'About' },
-  { name: 'Blog', route: 'Blog' },
-  { name: 'Help', route: 'Help' },
-  { name: 'Contact', route: 'Contact' },
+  { name: "About OpenArt", route: "About" },
+  { name: "Blog", route: "Blog" },
+  { name: "Help", route: "Help" },
+  { name: "Contact", route: "Contact" },
 ];
 </script>
 
@@ -19,7 +19,7 @@ const router = [
   <div class="menu">
     <div class="w-11/12 mx-auto">
       <div class="flex items-center justify-between pb-8">
-        <img src="@/assets/navbar/Logo.svg" alt="Logo" />
+        <img class="cursor-pointer" src="@/assets/navbar/Logo.svg" alt="Logo" />
         <img
           class="cursor-pointer"
           src="@/assets/navbar/Close.svg"
