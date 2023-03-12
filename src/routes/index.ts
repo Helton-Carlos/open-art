@@ -47,6 +47,15 @@ const routes: Array<RouteRecordRaw> = [
     },
   },
   {
+    path: "/careers",
+    name: "careers",
+    component: () => import("../pages/Careers.vue"),
+    meta: {
+      title: "Discover, collect, and sell",
+      subTitle: "Careers",
+    },
+  },
+  {
     path: "/terms-services",
     name: "terms-services",
     component: () => import("../pages/TermsServices.vue"),

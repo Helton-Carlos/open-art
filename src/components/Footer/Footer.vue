@@ -4,8 +4,8 @@ const router = [
   { name: "Blog", route: "Blog" },
   { name: "Help", route: "Help" },
   { name: "Contact", route: "Contact" },
-  { name: "Careers", route: "Careers" },
-  { name: "Terms of Service", route: "Terms" },
+  { name: "Careers", route: "careers" },
+  { name: "Terms of Service", route: "terms-services" },
 ];
 </script>
 
