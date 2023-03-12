@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useRoute } from "vue-router";
-import Title from "../components/Title/Title.vue";
+import Title from "@/components/Title/Title.vue";
 
 const route = useRoute();
 

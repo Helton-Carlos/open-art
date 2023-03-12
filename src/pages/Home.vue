@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { useRoute } from "vue-router";
-import Title from "../components/Title/Title.vue";
-import InputSearc from "../components/InputSearc/InputSearc.vue";
-import Card from "../components/Card/Card.vue";
+import Title from "@/components/Title/Title.vue";
+import InputSearc from "@/components/InputSearc/InputSearc.vue";
+import Card from "@/components/Card/Card.vue";
 
 const route = useRoute();
 
