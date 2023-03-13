@@ -1,13 +1,16 @@
 <script setup lang="ts">
+import { useRouter } from "vue-router";
 import Button from "../Button/Button.vue";
 
 defineEmits<{ (e: "onClick"): void }>();
 
-function test() {
-  alert("path");
+const router = useRouter();
+
+function createAccount() {
+  router.push({ name: "create-account" })
 }
 
-const router = [
+const route = [
   { name: "About OpenArt", route: "About" },
   { name: "Blog", route: "Blog" },
   { name: "Help", route: "Help" },
@@ -30,7 +33,7 @@ const router = [
 
       <div
         class="flex justify-center pb-5 hover:text-primary"
-        v-for="path in router"
+        v-for="path in route"
       >
         <router-link class="font-extrabold" :to="path.route">{{
           path.name
@@ -38,7 +41,7 @@ const router = [
       </div>
 
       <div class="flex justify-center">
-        <Button title="Connect wallet" color="standard" :onClick="test" />
+        <Button title="Create an account" color="standard" :onClick="createAccount" />
       </div>
     </div>
   </div>

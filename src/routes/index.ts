@@ -63,6 +63,15 @@ const routes: Array<RouteRecordRaw> = [
       title: "Discover, collect, and sell",
       subTitle: "TermsServices",
     },
+  },
+  {
+    path: "/create-account",
+    name: "create-account",
+    component: () => import("../pages/CreateAccount.vue"),
+    meta: {
+      title: "Discover, collect, and sell",
+      subTitle: "CreateAccount",
+    },
   }
 ];
 
