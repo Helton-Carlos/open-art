@@ -17,7 +17,7 @@ function menuIndex() {
 }
 
 defineEmits<{
-  (e: 'close', val: string): void
+  (e: 'close', val: boolean): void
 }>()
 
 const route = [
