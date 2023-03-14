@@ -27,5 +27,5 @@ span {
 }
 
 .menu {
-  @apply w-full h-screen bg-white rounded-lg shadow-lg overflow-auto;
+  @apply w-full h-screen bg-white rounded-lg shadow-lg overflow-hidden;
 }

@@ -16,19 +16,21 @@ function menuIndex() {
 </script>
 
 <template>
-  <Menu v-show="menu" :closeMenu="toggleMenu" :menuIndex="menuIndex" />
-  <div class="w-11/12 mx-auto mt-4 flex justify-between">
-    <img
-      class="cursor-pointer"
-      src="@/assets/navbar/Logo.svg"
-      alt="Logo"
-      @click="menuIndex"
-    />
-    <img
-      class="cursor-pointer"
-      src="@/assets/navbar/Menu.svg"
-      alt="Menu"
-      @click="toggleMenu"
-    />
+  <div>
+    <Menu v-show="menu" @close="toggleMenu" />
+    <div class="w-11/12 mx-auto mt-4 flex justify-between">
+      <img
+        class="cursor-pointer"
+        src="@/assets/navbar/Logo.svg"
+        alt="Logo"
+        @click="menuIndex"
+      />
+      <img
+        class="cursor-pointer"
+        src="@/assets/navbar/Menu.svg"
+        alt="Menu"
+        @click="toggleMenu"
+      />
+    </div>
   </div>
 </template>

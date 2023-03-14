@@ -1,18 +1,24 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import { useRouter } from "vue-router";
 import Button from "../Button/Button.vue";
 import Modal from "../Modal/Modal.vue";
 
-const modal = ref<Boolean>(false);
+const modal = ref<boolean>(false);
 
-defineEmits<{
-  (e: "menuIndex"): void;
-  (e: "closeMenu"): void;
-}>();
+const router = useRouter();
 
 function modalOn() {
   modal.value = !modal.value;
 }
+
+function menuIndex() {
+  router.push({ name: "home" });
+}
+
+defineEmits<{
+  (e: 'close', val: string): void
+}>()
 
 const route = [
   { name: "About OpenArt", route: "About" },
@@ -30,13 +36,13 @@ const route = [
           class="cursor-pointer"
           src="@/assets/navbar/Logo.svg"
           alt="Logo"
-          @click="$emit('menuIndex')"
+          @click="menuIndex"
         />
         <img
           class="cursor-pointer"
           src="@/assets/navbar/Close.svg"
           alt="Menu"
-          @click="$emit('closeMenu')"
+          @click="$emit('close')"
         />
       </div>
 
