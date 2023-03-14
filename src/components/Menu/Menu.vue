@@ -8,17 +8,14 @@ const modal = ref<boolean>(false);
 
 const router = useRouter();
 
-function modalOn() {
+function toggleModal() {
   modal.value = !modal.value;
 }
 
-function menuIndex() {
-  router.push({ name: "home" });
-}
-
 defineEmits<{
-  (e: 'close', val: boolean): void
-}>()
+  (e: "close", val: boolean): void;
+  (e: "indexRoute", val: boolean): void;
+}>();
 
 const route = [
   { name: "About OpenArt", route: "About" },
@@ -36,7 +33,7 @@ const route = [
           class="cursor-pointer"
           src="@/assets/navbar/Logo.svg"
           alt="Logo"
-          @click="menuIndex"
+          @click="$emit('indexRoute')"
         />
         <img
           class="cursor-pointer"
@@ -51,14 +48,17 @@ const route = [
         v-for="path in route"
       >
         <p>
-          <router-link class="font-extrabold" :to="path.route">{{
-            path.name
-          }}</router-link>
+          <router-link
+            class="font-extrabold"
+            :to="path.route"
+            @click="$emit('close')"
+            >{{ path.name }}</router-link
+          >
         </p>
       </div>
 
       <div class="flex justify-center">
-        <Button title="Create an account" color="standard" :onClick="modalOn" />
+        <Button title="Create an account" color="standard" :onClick="toggleModal" />
       </div>
     </div>
 
@@ -66,6 +66,7 @@ const route = [
       v-show="modal"
       title="Welcome!"
       subtitle="Do you already have an account?"
+      @toggleModal="toggleModal"
     />
   </div>
 </template>

@@ -12,12 +12,13 @@ function toggleMenu() {
 
 function menuIndex() {
   router.push({ name: "home" });
+  toggleMenu();
 }
 </script>
 
 <template>
   <div>
-    <Menu v-show="menu" @close="toggleMenu" />
+    <Menu v-show="menu" @close="toggleMenu" @indexRoute="menuIndex" />
     <div class="w-11/12 mx-auto mt-4 flex justify-between">
       <img
         class="cursor-pointer"

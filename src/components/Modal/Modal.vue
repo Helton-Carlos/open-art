@@ -6,6 +6,10 @@ import Button from "../Button/Button.vue";
 
 defineProps<IModal>();
 
+defineEmits<{
+  (e: "toggleModal", val: boolean): void;
+}>();
+
 const router = useRouter();
 
 function logar() {
@@ -24,10 +28,10 @@ function createAccount() {
     <div class="flex items-center justify-center rounded-xl text-center">
       <div class="card w-[350px]">
         <img
-          class="cursor-pointer relative mb-4"
+          class="cursor-pointer"
           src="@/assets/navbar/Close.svg"
           alt="Menu"
-          @click="$emit('onClick')"
+          @click="$emit('toggleModal')"
         />
         <p class="text-black font-extrabold text-2xl" data-testid="title-id">
           {{ title }}
