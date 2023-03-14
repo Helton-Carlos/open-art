@@ -1,20 +1,17 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { useRouter } from "vue-router";
 import Button from "../Button/Button.vue";
 import Modal from "../Modal/Modal.vue";
 
-defineEmits<{ (e: "onClick"): void }>();
-
-const router = useRouter();
-
 const modal = ref<Boolean>(false);
 
-function createAccount() {
+defineEmits<{
+  (e: "menuIndex"): void;
+  (e: "closeMenu"): void;
+}>();
+
+function modalOn() {
   modal.value = !modal.value;
-  if (route.length > 5) {
-    router.push({ name: "create-account" });
-  }
 }
 
 const route = [
@@ -29,12 +26,17 @@ const route = [
   <div class="menu">
     <div class="w-11/12 mx-auto">
       <div class="flex items-center justify-between mt-4 pb-8">
-        <img class="cursor-pointer" src="@/assets/navbar/Logo.svg" alt="Logo" />
+        <img
+          class="cursor-pointer"
+          src="@/assets/navbar/Logo.svg"
+          alt="Logo"
+          @click="$emit('menuIndex')"
+        />
         <img
           class="cursor-pointer"
           src="@/assets/navbar/Close.svg"
           alt="Menu"
-          @click="$emit('onClick')"
+          @click="$emit('closeMenu')"
         />
       </div>
 
@@ -42,17 +44,15 @@ const route = [
         class="flex justify-center pb-5 hover:text-primary"
         v-for="path in route"
       >
-        <router-link class="font-extrabold" :to="path.route">{{
-          path.name
-        }}</router-link>
+        <p>
+          <router-link class="font-extrabold" :to="path.route">{{
+            path.name
+          }}</router-link>
+        </p>
       </div>
 
       <div class="flex justify-center">
-        <Button
-          title="Create an account"
-          color="standard"
-          :onClick="createAccount"
-        />
+        <Button title="Create an account" color="standard" :onClick="modalOn" />
       </div>
     </div>
 

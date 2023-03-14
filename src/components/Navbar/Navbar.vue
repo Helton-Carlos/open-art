@@ -3,11 +3,11 @@ import { ref } from "vue";
 import { useRouter } from "vue-router";
 import Menu from "../Menu/Menu.vue";
 
-const toggleMenu = ref<boolean>(false);
+const menu = ref<boolean>(false);
 const router = useRouter();
 
-function openMenu() {
-  toggleMenu.value = !toggleMenu.value;
+function toggleMenu() {
+  menu.value = !menu.value;
 }
 
 function menuIndex() {
@@ -16,7 +16,7 @@ function menuIndex() {
 </script>
 
 <template>
-  <Menu v-show="toggleMenu" :onClick="openMenu" />
+  <Menu v-show="menu" :closeMenu="toggleMenu" :menuIndex="menuIndex" />
   <div class="w-11/12 mx-auto mt-4 flex justify-between">
     <img
       class="cursor-pointer"
@@ -28,7 +28,7 @@ function menuIndex() {
       class="cursor-pointer"
       src="@/assets/navbar/Menu.svg"
       alt="Menu"
-      @click="openMenu"
+      @click="toggleMenu"
     />
   </div>
 </template>
