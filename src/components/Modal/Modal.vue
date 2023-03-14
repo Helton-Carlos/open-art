@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { IModal } from "./Modal";
-import { ref } from "vue";
 import { useRouter } from "vue-router";
 import Button from "../Button/Button.vue";
 

@@ -1,12 +1,9 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { useRouter } from "vue-router";
 import Button from "../Button/Button.vue";
 import Modal from "../Modal/Modal.vue";
 
 const modal = ref<boolean>(false);
-
-const router = useRouter();
 
 function toggleModal() {
   modal.value = !modal.value;
