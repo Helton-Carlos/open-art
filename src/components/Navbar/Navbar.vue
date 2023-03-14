@@ -12,7 +12,7 @@ function toggleMenu() {
 
 function menuIndex() {
   router.push({ name: "home" });
-  toggleMenu();
+  menu.value = false;
 }
 </script>
 
