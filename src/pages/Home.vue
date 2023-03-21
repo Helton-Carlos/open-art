@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useRoute } from "vue-router";
+import { ref } from "vue";
 import Title from "@/components/Title/Title.vue";
 import InputSearc from "@/components/InputSearc/InputSearc.vue";
 import Card from "@/components/Card/Card.vue";
@@ -8,6 +9,7 @@ const route = useRoute();
 
 const title = route.meta.title;
 const subTitle = route.meta.subTitle;
+const text = ref<string>("");
 
 const cards = [
   {
@@ -35,6 +37,21 @@ const cards = [
     imagePersona: "src/assets/card/person.png",
   },
 ];
+
+function search() {
+  let title = cards.map((item) => item.title);
+
+  return title.filter((item) =>
+    item.toLowerCase().includes(text.value.toLowerCase())
+  );
+}
+
+function getCard() {
+  search().forEach((searchs) => {
+    const card = cards.find((name) => name.title === searchs);
+    console.log(card);
+  });
+}
 </script>
 
 <template>
@@ -44,17 +61,20 @@ const cards = [
     <InputSearc
       placeholder="Search items, collections, and accounts"
       type="text"
-      modelValue="text"
+      v-model:modelValue="text"
+      @update:model-value="search"
     />
+    {{ getCard() }}
 
     <div class="sm:flex sm:justify-center sm:flex-wrap gap-6">
-        <Card
-          v-for="(card, index) in cards" :key="index"
-          :title="card.title"
-          :persona="card.persona"
-          :imageMain="card.imageMain"
-          :imagePersona="card.imagePersona"
-        />
+      <Card
+        v-for="(card, index) in cards"
+        :key="index"
+        :title="card.title"
+        :persona="card.persona"
+        :imageMain="card.imageMain"
+        :imagePersona="card.imagePersona"
+      />
     </div>
   </div>
 </template>
