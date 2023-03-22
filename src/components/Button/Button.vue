@@ -8,6 +8,7 @@ defineEmits<{ (e: "onClick"): void }>();
 <template>
   <div>
     <button
+      data-testid="btn-id"
       class="px-7 py-1 rounded drop-shadow-md font-medium"
       :class="{
         'btn-standard': color == 'standard',

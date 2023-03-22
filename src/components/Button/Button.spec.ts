@@ -1,4 +1,4 @@
-import { render } from "@testing-library/vue";
+import { render, fireEvent } from "@testing-library/vue";
 import Button from "./Button.vue";
 
 describe("Button component", () => {
@@ -12,14 +12,15 @@ describe("Button component", () => {
     expect(component).toBeDefined();
   });
 
-  test("Props Button", async () => {
-    const component = render(Button, {
+  test("Button Title", async () => {
+    const { getByText } = render(Button, {
       props: {
         title: "title",
         color: "standard",
       },
     });
-
-    expect(component.getByText("title")).toBeDefined();
+    
+    const btn  = getByText("title");
+    expect(btn.textContent).toBe('title');
   });
 });
