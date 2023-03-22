@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useRoute } from "vue-router";
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import Title from "@/components/Title/Title.vue";
 import InputSearc from "@/components/InputSearc/InputSearc.vue";
 import Card from "@/components/Card/Card.vue";
@@ -46,12 +46,11 @@ function search() {
   );
 }
 
-function getCard() {
-  search().forEach((searchs) => {
-    const card = cards.find((name) => name.title === searchs);
-    console.log(card);
+const getCard = computed<any>(() => {
+  return search().map((searchs) => {
+    return cards.find((name) => name.title === searchs);
   });
-}
+});
 </script>
 
 <template>
@@ -64,11 +63,10 @@ function getCard() {
       v-model:modelValue="text"
       @update:model-value="search"
     />
-    {{ getCard() }}
 
     <div class="sm:flex sm:justify-center sm:flex-wrap gap-6">
       <Card
-        v-for="(card, index) in cards"
+        v-for="(card, index) in getCard"
         :key="index"
         :title="card.title"
         :persona="card.persona"
