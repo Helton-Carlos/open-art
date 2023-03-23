@@ -1,42 +1,17 @@
 <script setup lang="ts">
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 import { ref, computed } from "vue";
 import Title from "@/components/Title/Title.vue";
 import InputSearc from "@/components/InputSearc/InputSearc.vue";
 import Card from "@/components/Card/Card.vue";
+import cards from "@/utils/utils-card";
 
 const route = useRoute();
+const router = useRouter();
 
 const title = route.meta.title;
 const subTitle = route.meta.subTitle;
 const text = ref<string>("");
-
-const cards = [
-  {
-    title: "Silent Wave",
-    persona: "Creator",
-    imageMain: "src/assets/card/art01.png",
-    imagePersona: "src/assets/card/person.png",
-  },
-  {
-    title: "Silent Color",
-    persona: "Creator102",
-    imageMain: "src/assets/card/art02.png",
-    imagePersona: "src/assets/card/person.png",
-  },
-  {
-    title: "Pawel Czerwinski",
-    persona: "Pawel Czerwinski",
-    imageMain: "src/assets/card/art03.png",
-    imagePersona: "src/assets/card/person.png",
-  },
-  {
-    title: "Silent Wave",
-    persona: "Creator",
-    imageMain: "src/assets/card/art01.png",
-    imagePersona: "src/assets/card/person.png",
-  },
-];
 
 function search() {
   let title = cards.map((item) => item.title);
@@ -46,9 +21,13 @@ function search() {
   );
 }
 
+function selectCard(id: number) {
+  router.push({ name: "buy", params: { id } });
+}
+
 const getCard = computed<any>(() => {
-  return search().map((searchs) => {
-    return cards.find((name) => name.title === searchs);
+  return search().map((searchs: any) => {
+    return cards.find((name: any) => name.title === searchs);
   });
 });
 </script>
@@ -66,12 +45,13 @@ const getCard = computed<any>(() => {
 
     <div class="sm:flex sm:justify-center sm:flex-wrap gap-6">
       <Card
-        v-for="(card, index) in getCard"
-        :key="index"
+        v-for="card in getCard"
+        :key="card.id"
         :title="card.title"
         :persona="card.persona"
         :imageMain="card.imageMain"
         :imagePersona="card.imagePersona"
+        @selectCard="selectCard(card.id)"
       />
     </div>
   </div>

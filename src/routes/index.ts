@@ -8,7 +8,7 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       title: "Discover, collect, and sell",
       subTitle: "Your Digital Art",
-    },
+    }
   },
   {
     path: "/about",
@@ -17,7 +17,7 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       title: "Discover, collect, and sell",
       subTitle: "About OpenArt",
-    },
+    }
   },
   {
     path: "/blog",
@@ -26,7 +26,7 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       title: "Discover, collect, and sell",
       subTitle: "Blog",
-    },
+    }
   },
   {
     path: "/help",
@@ -35,7 +35,7 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       title: "Discover, collect, and sell",
       subTitle: "Help",
-    },
+    }
   },
   {
     path: "/contact",
@@ -44,7 +44,7 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       title: "Discover, collect, and sell",
       subTitle: "Contact",
-    },
+    }
   },
   {
     path: "/careers",
@@ -53,7 +53,7 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       title: "Discover, collect, and sell",
       subTitle: "Careers",
-    },
+    }
   },
   {
     path: "/terms-services",
@@ -62,7 +62,7 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       title: "Discover, collect, and sell",
       subTitle: "TermsServices",
-    },
+    }
   },
   {
     path: "/create-account",
@@ -71,8 +71,14 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       title: "Discover, collect, and sell",
       subTitle: "CreateAccount",
-    },
-  }
+    }
+  },
+  {
+    path: "/buy/:id",
+    name: "buy",
+    props: true,
+    component: () => import("../pages/Buy.vue")
+  },
 ];
 
 const router = createRouter({

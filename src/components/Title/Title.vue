@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ITitle } from "./Title";
+import type { ITitle } from "./Title";
 
 defineProps<ITitle>();
 </script>

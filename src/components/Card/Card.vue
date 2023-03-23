@@ -1,11 +1,18 @@
 <script setup lang="ts">
-import { ICard } from "./Card";
+import type { ICard } from "./Card";
 
 defineProps<ICard>();
+
+defineEmits<{
+  (e: "selectCard"): void;
+}>();
 </script>
 
 <template>
-  <div class="w-full card cursor-pointer sm:w-[290px]">
+  <div
+    class="w-full card cursor-pointer sm:w-[290px]"
+    @click="$emit('selectCard')"
+  >
     <div>
       <img
         :src="imageMain"
