@@ -4,7 +4,7 @@ import cards from "@/utils/utils-card";
 
 const { id } = defineProps<{ id: number | string }>();
 
-const getCard = computed(() => {
+const getCard = computed<any>(() => {
   return cards.find((item) => item.id == id);
 });
 </script>
