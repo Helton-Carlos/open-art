@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useRoute, useRouter } from "vue-router";
 import { ref, computed } from "vue";
+import users from "@/boot/axios";
 import Title from "@/components/Title/Title.vue";
 import InputSearc from "@/components/InputSearc/InputSearc.vue";
 import Card from "@/components/Card/Card.vue";
@@ -12,6 +13,8 @@ const router = useRouter();
 const title = route.meta.title;
 const subTitle = route.meta.subTitle;
 const text = ref<string>("");
+
+console.log(users);
 
 function search() {
   let title = cards.map((item) => item.title);

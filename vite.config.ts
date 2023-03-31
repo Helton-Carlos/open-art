@@ -15,6 +15,7 @@ export default defineConfig({
       { find: "@/store", replacement: "/src/store" },
       { find: "@/utils", replacement: "/src/utils" },
       { find: "@/components", replacement: "/src/components" },
+      { find: "@/boot", replacement: "/src/boot" },
     ],
   },
   test: {
