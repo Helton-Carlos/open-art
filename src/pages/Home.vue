@@ -14,8 +14,6 @@ const title = route.meta.title;
 const subTitle = route.meta.subTitle;
 const text = ref<string>("");
 
-console.log(users);
-
 function search() {
   let title = cards.map((item) => item.title);
 
@@ -33,6 +31,7 @@ const getCard = computed<any>(() => {
     return cards.find((name: any) => name.title === searchs);
   });
 });
+
 </script>
 
 <template>
