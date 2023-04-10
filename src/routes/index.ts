@@ -69,8 +69,8 @@ const routes: Array<RouteRecordRaw> = [
     name: "create-account",
     component: () => import("../pages/CreateAccount.vue"),
     meta: {
-      title: "Discover, collect, and sell",
-      subTitle: "CreateAccount",
+      title: "Create your account here!",
+      subTitle: "Create Account",
     }
   },
   {

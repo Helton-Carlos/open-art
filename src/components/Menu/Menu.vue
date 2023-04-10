@@ -1,12 +1,11 @@
 <script setup lang="ts">
-import { ref } from "vue";
 import Button from "../Button/Button.vue";
-import Modal from "../Modal/Modal.vue";
+import { useRouter } from "vue-router";
 
-const modal = ref<boolean>(false);
+const router = useRouter();
 
-function toggleModal() {
-  modal.value = !modal.value;
+function createAccount() {
+  router.push({ name: "create-account" });
 }
 
 defineEmits<{
@@ -55,15 +54,8 @@ const route = [
       </div>
 
       <div class="flex justify-center">
-        <Button title="Create an account" color="standard" :onClick="toggleModal" />
+        <Button title="Create an account" color="standard" :onClick="createAccount"  @click="$emit('close')" />
       </div>
     </div>
-
-    <Modal
-      v-show="modal"
-      title="Welcome!"
-      subtitle="Do you already have an account?"
-      @toggleModal="toggleModal"
-    />
   </div>
 </template>

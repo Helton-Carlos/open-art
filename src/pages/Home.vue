@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { useRoute, useRouter } from "vue-router";
 import { ref, computed } from "vue";
-import users from "@/boot/axios";
 import Title from "@/components/Title/Title.vue";
 import InputSearc from "@/components/InputSearc/InputSearc.vue";
 import Card from "@/components/Card/Card.vue";
