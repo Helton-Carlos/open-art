@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { useRoute } from "vue-router";
+import { useRoute, useRouter} from "vue-router";
 import { ref } from "vue";
 import Title from "@/components/Title/Title.vue";
 import InputSearc from "@/components/InputSearc/InputSearc.vue";
 import Button from "@/components/Button/Button.vue";
 
 const route = useRoute();
+const router = useRouter();
 
 const title = route.meta.title;
 const subTitle = route.meta.subTitle;
@@ -22,6 +23,8 @@ function registerCustomer() {
   };
   
   console.log(registerCustomer);
+
+  router.push ({ name: 'profile'})
 }
 </script>
 

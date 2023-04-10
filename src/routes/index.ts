@@ -74,6 +74,15 @@ const routes: Array<RouteRecordRaw> = [
     }
   },
   {
+    path: "/profile",
+    name: "profile",
+    component: () => import("../pages/Profile.vue"),
+    meta: {
+      title: "Customice your user",
+      subTitle: "Profile",
+    }
+  },
+  {
     path: "/buy/:id",
     name: "buy",
     props: true,
