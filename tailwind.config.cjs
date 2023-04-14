@@ -14,7 +14,7 @@ module.exports = {
       base: '1rem',
       xl: '1.3rem',
       '2xl': '1.5rem',
-      '3xl': '3rem',
+      '3xl': '2rem',
     },
     colors: {
       primary: "#002EF1",

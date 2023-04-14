@@ -20,13 +20,13 @@ const subTitle = route.meta.subTitle;
     </p>
 
     <div class="flex flex-col items-center gap-8 w-5/6 my- mx-auto md:flex-row">
-      <p class="font-bold text-2xl md:w-[450px]">
+      <p class="font-bold text-2xl md:w-[450px] lg:text-3xl">
         "We give some recommendations on how to price work."
       </p>
       <hr
         class="w-48 h-1 mx-auto my-4 bg-gray-dark border-0 rounded md:my-10 dark:bg-gray-700 md:hidden"
       />
-      <p class="font-bold text-2xl md:w-[450px]">
+      <p class="font-bold text-2xl md:w-[450px] lg:text-3xl">
         "We're not playing at being curators. We're saying that everyone can
         participate, creating a community that everyone can contribute to."
       </p>
