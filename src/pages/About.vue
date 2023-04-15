@@ -9,7 +9,7 @@ const subTitle = route.meta.subTitle;
 </script>
 
 <template>
-  <div class="w-11/12 my-4 mx-auto text-center">
+  <div class="containner my-4 text-center">
     <Title :title="title" :subTitle="subTitle" />
 
     <p class="text-xl my-10 font-bold underline">
@@ -19,16 +19,21 @@ const subTitle = route.meta.subTitle;
       selling or buying it.
     </p>
 
-    <div class="flex flex-col items-center gap-8 w-5/6 my- mx-auto md:flex-row">
-      <p class="font-bold text-2xl md:w-[450px] lg:text-3xl">
-        "We give some recommendations on how to price work."
+    <div
+      class="flex flex-col items-center gap-8 my-4 containner md:flex-row"
+    >
+      <p
+        class="bg-blue text-white font-bold text-2xl p-4 rounded-xl md:w-[450px] lg:text-3xl"
+      >
+        " Share your artwork with us!"
       </p>
       <hr
         class="w-48 h-1 mx-auto my-4 bg-gray-dark border-0 rounded md:my-10 dark:bg-gray-700 md:hidden"
       />
-      <p class="font-bold text-2xl md:w-[450px] lg:text-3xl">
-        "We're not playing at being curators. We're saying that everyone can
-        participate, creating a community that everyone can contribute to."
+      <p
+        class="bg-purple text-white font-bold text-2xl p-4 rounded-xl md:w-[450px] lg:text-3xl"
+      >
+        "Make money with art, here it is possible!"
       </p>
     </div>
 

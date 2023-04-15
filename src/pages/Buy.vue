@@ -10,7 +10,7 @@ const getCard = computed<any>(() => {
 </script>
 
 <template>
-  <div class="w-11/12 my-4 mx-auto text-center">
+  <div class="my-4 containner text-center">
     <hr>
     <div class="flex justify-between items-center">
       <div class="flex my-2">

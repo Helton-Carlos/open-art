@@ -29,7 +29,7 @@ function registerCustomer() {
 </script>
 
 <template>
-  <div class="w-11/12 my-4 mx-auto text-center">
+  <div class="my-4 containner text-center">
     <Title :title="title" :subTitle="subTitle" />
 
     <form @submit.prevent="registerCustomer">

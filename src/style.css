@@ -29,3 +29,7 @@ span {
 .menu {
   @apply w-full h-screen bg-white rounded-lg shadow-lg overflow-hidden;
 }
+
+.containner {
+  @apply w-11/12 mx-auto;
+}
