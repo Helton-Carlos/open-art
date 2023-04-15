@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useRouter } from "vue-router";
-import Menu from "../Menu/Menu.vue";
+import Menu from "@/components/Menu/Menu.vue";
 
 const menu = ref<boolean>(false);
 const router = useRouter();
