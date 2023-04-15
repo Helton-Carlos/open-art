@@ -23,17 +23,17 @@ const subTitle = route.meta.subTitle;
       class="flex flex-col items-center gap-8 my-4 containner md:flex-row"
     >
       <p
-        class="bg-blue text-white font-bold text-2xl p-4 rounded-xl md:w-[450px] lg:text-3xl"
+        class="bg-blue text-white font-bold text-2xl p-4 rounded-xl md:w-full lg:text-3xl"
       >
-        " Share your artwork with us!"
+        "Share your artwork with us!"
       </p>
       <hr
         class="w-48 h-1 mx-auto my-4 bg-gray-dark border-0 rounded md:my-10 dark:bg-gray-700 md:hidden"
       />
       <p
-        class="bg-purple text-white font-bold text-2xl p-4 rounded-xl md:w-[450px] lg:text-3xl"
+        class="bg-purple text-white font-bold text-2xl p-4 rounded-xl md:w-full lg:text-3xl"
       >
-        "Make money with art, here it is possible!"
+        "Make money with art!"
       </p>
     </div>
 
