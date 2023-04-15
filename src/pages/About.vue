@@ -6,40 +6,50 @@ const route = useRoute();
 
 const title = route.meta.title;
 const subTitle = route.meta.subTitle;
+
+const miniCard = [
+  { image: "src/assets/about/Build-together.png", name: "Build together" },
+  { image: "src/assets/about/Trust.png", name: "Trust" },
+];
 </script>
 
 <template>
   <div class="containner my-4 text-center">
     <Title :title="title" :subTitle="subTitle" />
 
-    <p class="text-xl my-10 font-bold underline">
-      The openArt is an application for those who want to sell and buy works of
-      art, made by people who enjoy design and fashion. It has the participation
-      of 1,200 artists who post their work on the platform with the aim of
-      selling or buying it.
+    <img src="@/assets/about/processor.png" alt="processor" class="mx-auto" />
+
+    <p>
+      OpenArt help anyone create a beautiful website, landing page, app to
+      collect NFTs digital art.
     </p>
 
-    <div
-      class="flex flex-col items-center gap-8 my-4 containner md:flex-row"
-    >
-      <p
-        class="bg-blue text-white font-bold text-2xl p-4 rounded-xl md:w-full lg:text-3xl"
-      >
-        "Share your artwork with us!"
-      </p>
-      <hr
-        class="w-48 h-1 mx-auto my-4 bg-gray-dark border-0 rounded md:my-10 dark:bg-gray-700 md:hidden"
-      />
-      <p
-        class="bg-purple text-white font-bold text-2xl p-4 rounded-xl md:w-full lg:text-3xl"
-      >
-        "Make money with art!"
-      </p>
+    <h4 class="font-bold text-base py-4">Crypto for Creative Communities</h4>
+
+    <p>
+      NFTs—non-fungible tokens—are empowering artists, musicians, and all kinds
+      of genre-defying digital creators to invent a new cultural paradigm. How
+      this emerging culture of digital art ownership looks is up to all of us.
+    </p>
+
+    <h4 class="font-bold text-base py-4">How it work</h4>
+
+    <div class="flex justify-center gap-2 md:gap-8">
+      <div class="card w-[150px]" v-for="card in miniCard">
+        <img class="flex" :src="card.image" :alt="card.name" />
+        <p class="font-bold">{{ card.name }}</p>
+      </div>
     </div>
 
-    <p class="text-xl my-10 font-bold underline">
-      The application has free registration and has only a few rules for sale,
-      to generate security and comfort to the customer.
+    <h4 class="font-bold text-base py-4">For Creators</h4>
+
+    <p>
+      Creators are invited to join Foundation by members of the community. Once
+      you’ve received an invite, you’ll need to set up a MetaMask wallet with
+      ETH before you can create an artist profile and mint an NFT—which means
+      uploading your JPG, PNG, or video file to IPFS, a decentralized
+      peer-to-peer storage network. It will then be an NFT you can price in ETH
+      and put up for auction on Foundation.
     </p>
   </div>
 </template>
