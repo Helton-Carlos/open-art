@@ -24,26 +24,28 @@ const miniCard = [
       collect NFTs digital art.
     </p>
 
-    <h4 class="font-bold text-base py-4">Crypto for Creative Communities</h4>
+    <h4 class="text-left font-bold text-base py-4">
+      Crypto for Creative Communities
+    </h4>
 
-    <p>
+    <p class="text-left">
       NFTs—non-fungible tokens—are empowering artists, musicians, and all kinds
       of genre-defying digital creators to invent a new cultural paradigm. How
       this emerging culture of digital art ownership looks is up to all of us.
     </p>
 
-    <h4 class="font-bold text-base py-4">How it work</h4>
+    <h4 class="text-left font-bold text-base py-4">How it work</h4>
 
     <div class="flex justify-center gap-2 md:gap-8">
       <div class="card w-[150px]" v-for="card in miniCard">
         <img class="flex" :src="card.image" :alt="card.name" />
-        <p class="font-bold">{{ card.name }}</p>
+        <p class="text-left font-bold">{{ card.name }}</p>
       </div>
     </div>
 
-    <h4 class="font-bold text-base py-4">For Creators</h4>
+    <h4 class="text-left font-bold text-base py-4">For Creators</h4>
 
-    <p>
+    <p class="text-left">
       Creators are invited to join Foundation by members of the community. Once
       you’ve received an invite, you’ll need to set up a MetaMask wallet with
       ETH before you can create an artist profile and mint an NFT—which means
