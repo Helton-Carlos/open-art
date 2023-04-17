@@ -16,7 +16,7 @@ const getCard = computed<any>(() => {
 
 <template>
   <div class="my-4 containner">
-    <img :src="getCard.imageMain" :alt="getCard.title" />
+    <img :src="getCard.imageMain" :alt="getCard.title" class="w-full" />
     <p class="text-gray-dark pt-2 font-extrabold text-md">
       {{ getCard.title }}
     </p>
