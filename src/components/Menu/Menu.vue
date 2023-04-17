@@ -54,7 +54,12 @@ const route = [
       </div>
 
       <div class="flex justify-center">
-        <Button title="Create an account" color="standard" :onClick="createAccount"  @click="$emit('close')" />
+        <Button
+          title="Create an account"
+          color="standard"
+          :onClick="createAccount"
+          @click="$emit('close')"
+        />
       </div>
     </div>
   </div>
