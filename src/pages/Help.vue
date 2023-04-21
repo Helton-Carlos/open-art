@@ -15,11 +15,11 @@ const text = ref<string>("");
 
 function registerCustomer() {
   const registerCustomer = {
-    name: text.value,
     email: email.value,
+    text: text.value,
   };
 
-  console.log(registerCustomer);
+  alert( `E-mail: ` + registerCustomer.email + ` Texto: `+ registerCustomer.text)
 }
 </script>
 
@@ -32,7 +32,7 @@ function registerCustomer() {
 
       <InputSearc
         placeholder="Type your e-mail..."
-        type="e-mail"
+        type="email"
         v-model:modelValue="email"
       />
 
