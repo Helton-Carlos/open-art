@@ -12,6 +12,12 @@ const notice = ref<string>(
 const getCard = computed<any>(() => {
   return cards.find((item) => item.id == id);
 });
+
+function pageTopScroll() {
+	parent.scroll(0,0);
+}
+
+pageTopScroll();
 </script>
 
 <template>
@@ -49,7 +55,7 @@ const getCard = computed<any>(() => {
         <p class="pb-4">
           {{ notice }}
         </p>
-        
+
         <Button title="Place a bid" color="standard" />
       </div>
     </div>
