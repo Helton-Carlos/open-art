@@ -15,32 +15,43 @@ const getCard = computed<any>(() => {
 </script>
 
 <template>
-  <div class="my-4 containner">
-    <img :src="getCard.imageMain" :alt="getCard.title" class="w-full" />
-    <p class="text-gray-dark pt-2 font-extrabold text-md">
-      {{ getCard.title }}
-    </p>
-    <p class="text-gray font-semibold text-sm pb-2">
-      {{ getCard.persona }}
-    </p>
-    <p class="text-left">{{ getCard.describe }}</p>
+  <div class="my-8 containner block md:flex md:justify-between md:gap-4 md:items-center">
+    <img :src="getCard.imageMain" :alt="getCard.title" class="w-full md:w-[750px]" />
 
-    <div v-for="types in getCard.definitions" class="inline-block pr-1 pt-2">
-      <p class="border border-gray text-gray rounded-xl px-3 py-1">
-        #{{ types }}
+    <div>
+      <p class="text-gray-dark pt-2 font-extrabold text-md">
+        {{ getCard.title }}
       </p>
-    </div>
 
-    <div class="card">
-      <h4 class="font-bold text-base">Reserve Price</h4>
-      <div class="flex items-center">
-        <p class="font-bold text-xl py-4 pr-2">{{ getCard.value }} ETH</p>
-        <span class="font-bold text-gray text-base">${{ getCard.dolar }}</span>
+      <p class="text-gray font-semibold text-sm pb-2">
+        {{ getCard.persona }}
+      </p>
+
+      <p class="text-left">{{ getCard.describe }}</p>
+
+      <div v-for="types in getCard.definitions" class="inline-block pr-1 pt-2">
+        <p class="border border-gray text-gray rounded-xl px-3 py-1">
+          #{{ types }}
+        </p>
       </div>
-      <p class="pb-4">
-        {{ notice }}
-      </p>
-      <Button title="Place a bid" color="standard" />
+
+      <div class="card mt-4">
+        <h4 class="font-bold text-base">Reserve Price</h4>
+
+        <div class="flex items-center">
+          <p class="font-bold text-xl py-4 pr-2">{{ getCard.value }} ETH</p>
+
+          <span class="font-bold text-gray text-base"
+            >${{ getCard.dolar }}</span
+          >
+        </div>
+
+        <p class="pb-4">
+          {{ notice }}
+        </p>
+        
+        <Button title="Place a bid" color="standard" />
+      </div>
     </div>
   </div>
 </template>
