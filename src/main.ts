@@ -1,12 +1,16 @@
 import { createApp } from "vue";
-import "./style.css";
 import App from "./App.vue";
+import { createPinia } from 'pinia';
 import Router from "./routes/index";
-import axios from "axios";
+import Axios from "axios";
 import VueAxios from "vue-axios";
+import "./style.css";
+
+const Pinia = createPinia();
 
 const app = createApp(App);
 
-app.use(VueAxios, axios);
+app.use(VueAxios, Axios);
+app.use(Pinia);
 app.use(Router);
 app.mount("#app");

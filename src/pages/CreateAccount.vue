@@ -1,23 +1,25 @@
 <script setup lang="ts">
 import { useRoute, useRouter} from "vue-router";
 import { ref } from "vue";
+import { useUserStore } from "@/store/index";
 import Title from "@/components/Title/Title.vue";
 import InputSearc from "@/components/InputSearc/InputSearc.vue";
 import Button from "@/components/Button/Button.vue";
 
 const route = useRoute();
 const router = useRouter();
+const store = useUserStore();
 
 const title = route.meta.title;
 const subTitle = route.meta.subTitle;
 
-const text = ref<string>("");
+const name = ref<string>("");
 const email = ref<string>("");
 const password = ref<string>("");
 
 function registerCustomer() {
   const registerCustomer = {
-    name: text.value,
+    name: name.value,
     email: email.value,
     password: password.value,
   };
@@ -26,6 +28,8 @@ function registerCustomer() {
 
   router.push ({ name: 'profile'})
 }
+
+console.log(store.$onAction);
 </script>
 
 <template>
@@ -33,7 +37,7 @@ function registerCustomer() {
     <Title :title="title" :subTitle="subTitle" />
 
     <form @submit.prevent="registerCustomer">
-      <InputSearc placeholder="Name" type="text" v-model:modelValue="text" />
+      <InputSearc placeholder="Name" type="text" v-model:modelValue="name" />
 
       <InputSearc placeholder="E-mail" type="text" v-model:modelValue="email" />
 
