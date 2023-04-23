@@ -8,6 +8,10 @@ function createAccount() {
   router.push({ name: "create-account" });
 }
 
+function logout() {
+  localStorage.clear()
+}
+
 defineEmits<{
   (e: "close", val: boolean): void;
   (e: "indexRoute", val: boolean): void;
@@ -53,11 +57,18 @@ const route = [
         </p>
       </div>
 
-      <div class="flex justify-center">
+      <div class="flex justify-center flex-col mx-auto text-center">
         <Button
           title="Create an account"
           color="standard"
           :onClick="createAccount"
+          @click="$emit('close')"
+        />
+
+        <Button
+          title="Logout"
+          color="null"
+          :onClick="logout"
           @click="$emit('close')"
         />
       </div>
