@@ -16,7 +16,6 @@ export const useUserStore = defineStore("user", {
   },
   actions: {
     localStorage(keys: UserInfo) {
-      console.log(state);
       console.log(keys);
     }
   }

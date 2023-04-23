@@ -20,16 +20,15 @@ const password = ref<string>("");
 function registerCustomer() {
   const registerCustomer = {
     name: name.value,
-    email: email.value,
-    password: password.value,
+    email: email.value
   };
+
+  const user = JSON.stringify(registerCustomer);
   
-  console.log(registerCustomer);
+  localStorage.setItem('user', user);
 
   router.push ({ name: 'profile'})
 }
-
-console.log(store.$onAction);
 </script>
 
 <template>
