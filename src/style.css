@@ -30,6 +30,14 @@ span {
   @apply w-full h-screen bg-white rounded-lg shadow-lg overflow-hidden;
 }
 
+.inputOn {
+  @apply w-full my-8 block pl-5 py-2 text-sm text-gray-dark border border-gray-light rounded-lg bg-gray-light focus:border-primary focus:ring-primary focus:outline-none focus:ring focus:ring-opacity-40
+}
+
+.inputOff{
+  @apply w-full my-8 block pl-5 py-2 text-sm text-error border border-gray-light rounded-lg bg-gray-light focus:border-error ring-error outline-none ring ring-opacity-40
+}
+
 .containner {
   @apply w-11/12 mx-auto;
 }

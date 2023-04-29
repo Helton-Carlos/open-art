@@ -15,11 +15,12 @@ const name = ref<string>("");
 const email = ref<string>("");
 const password = ref<string>("");
 
-const description = ref<boolean>(false);
-const error = ref<string>("*Fill in all fields!");
+const textError = ref<string>("*Fill in all fields!");
+
+const error = ref<boolean>(false)
 
 function registerCustomer() {
-  description.value = false;
+  error.value = false;
 
   const registerCustomer = {
     name: name.value,
@@ -33,7 +34,7 @@ function registerCustomer() {
 
     router.push({ name: "profile" });
   } else {
-    description.value = true;
+    error.value = true;
   }
 }
 </script>
@@ -43,19 +44,20 @@ function registerCustomer() {
     <Title :title="title" :subTitle="subTitle" />
 
     <form @submit.prevent="registerCustomer">
-      <InputSearc placeholder="Name" type="text" v-model:modelValue="name" />
+      <InputSearc placeholder="Name" type="text" v-model:modelValue="name" :error="error"/>
 
-      <InputSearc placeholder="E-mail" type="text" v-model:modelValue="email" />
+      <InputSearc placeholder="E-mail" type="text" v-model:modelValue="email" :error="error" />
 
       <InputSearc
         placeholder="Password"
         type="Password"
         v-model:modelValue="password"
+        :error="error"
       />
 
       <Button title="Create account" color="standard" />
 
-      <p v-show="description" class="text-error underline pt-4">{{ error }}</p>
+      <p v-show="error" class="text-error font-extrabold underline pt-4">{{ textError }}</p>
     </form>
   </div>
 </template>

@@ -13,8 +13,10 @@ const subTitle = route.meta.subTitle;
 const email = ref<string>("");
 const text = ref<string>("");
 
+const error = ref<boolean>(false);
+
 function registerCustomer() {
-  if (email.value || text.value) {
+  if (email.value && text.value) {
     const registerCustomer = {
       email: email.value,
       text: text.value,
@@ -24,6 +26,7 @@ function registerCustomer() {
       `E-mail: ` + registerCustomer.email + ` Text: ` + registerCustomer.text
     );
   } else {
+    error.value = true;
     alert("*fill in the fields");
   }
 }
@@ -40,12 +43,14 @@ function registerCustomer() {
         placeholder="Type your e-mail..."
         type="email"
         v-model:modelValue="email"
+        :error="error"
       />
 
       <InputSearc
         placeholder="Type your question..."
         type="text"
         v-model:modelValue="text"
+        :error="error"
       />
 
       <Button title="Submit question" color="standard" />
