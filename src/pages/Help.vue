@@ -14,12 +14,18 @@ const email = ref<string>("");
 const text = ref<string>("");
 
 function registerCustomer() {
-  const registerCustomer = {
-    email: email.value,
-    text: text.value,
-  };
+  if (email.value || text.value) {
+    const registerCustomer = {
+      email: email.value,
+      text: text.value,
+    };
 
-  alert( `E-mail: ` + registerCustomer.email + ` Texto: `+ registerCustomer.text)
+    alert(
+      `E-mail: ` + registerCustomer.email + ` Text: ` + registerCustomer.text
+    );
+  } else {
+    alert("*fill in the fields");
+  }
 }
 </script>
 

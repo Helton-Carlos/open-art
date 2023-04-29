@@ -6,7 +6,7 @@ import Button from "@/components/Button/Button.vue";
 const { id } = defineProps<{ id: number | string }>();
 
 const notice = ref<string>(
-  " Once a bid has been placed and the reserve price has been met, a 24 hour auction for this artwork will begin."
+  "Once a bid has been placed and the reserve price has been met, a 24 hour auction for this artwork will begin."
 );
 
 const getCard = computed<any>(() => {
