@@ -44,7 +44,7 @@ function registerCustomer() {
     <Title :title="title" :subTitle="subTitle" />
 
     <form @submit.prevent="registerCustomer">
-      <InputSearc placeholder="Name" type="text" v-model:modelValue="name" :error="error"/>
+      <InputSearc placeholder="Name" type="text" v-model:modelValue="name" :error="error" />
 
       <InputSearc placeholder="E-mail" type="text" v-model:modelValue="email" :error="error" />
 

@@ -21,7 +21,8 @@ defineEmits<{
         data-testid="imageMain-id"
       />
     </div>
-    <div class="flex justify-between items-center">
+
+    <div class="flex justify-between items-center" v-if="context">
       <div class="flex my-2">
         <img :src="imagePersona" :alt="title" data-testid="imagePersona-id" />
         <div class="text-left pl-4">

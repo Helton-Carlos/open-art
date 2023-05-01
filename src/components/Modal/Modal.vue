@@ -30,7 +30,7 @@ function logar() {
           alt="Menu"
           @click="$emit('toggleModal')"
         />
-        <p class="text-black font-extrabold text-2xl" data-testid="title-id">
+        <p class="text-black font-extrabold text-xl" data-testid="title-id">
           {{ title }}
         </p>
         <p

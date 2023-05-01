@@ -1,6 +1,7 @@
 export interface ICard {
     title: string;
-    persona: string;
     imageMain: string;
-    imagePersona: string;
+    context?: boolean;
+    persona?: string;
+    imagePersona?: string;
 } 

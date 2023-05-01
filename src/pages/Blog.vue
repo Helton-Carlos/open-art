@@ -2,9 +2,10 @@
 import { useRoute } from "vue-router";
 import CardBlog from "@/components/CardBlog/CardBlog.vue";
 import Title from "@/components/Title/Title.vue";
-import cards from "@/utils/utils-card";
+import { cards } from "@/utils/utils-card";
 
 const route = useRoute();
+const card = cards();
 
 const title = route.meta.title;
 const subTitle = route.meta.subTitle;
@@ -16,12 +17,12 @@ const subTitle = route.meta.subTitle;
 
     <div class="flex flex-wrap gap-2">
       <CardBlog
-        v-for="card in cards"
-        :key="card.id"
-        :title="card.title"
-        :persona="card.persona"
-        :imageMain="card.imageMain"
-        :imagePersona="card.imagePersona"
+        v-for="cards in card"
+        :key="cards.id"
+        :title="cards.title"
+        :persona="cards.persona"
+        :imageMain="cards.imageMain"
+        :imagePersona="cards.imagePersona"
       />
     </div>
   </div>

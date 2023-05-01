@@ -4,17 +4,20 @@ import { ref, computed } from "vue";
 import Title from "@/components/Title/Title.vue";
 import InputSearc from "@/components/InputSearc/InputSearc.vue";
 import Card from "@/components/Card/Card.vue";
-import cards from "@/utils/utils-card";
+import { cards, cardsHot } from "@/utils/utils-card";
 
 const route = useRoute();
 const router = useRouter();
+
+const card = cards();
+const cardsHots = cardsHot();
 
 const title = route.meta.title;
 const subTitle = route.meta.subTitle;
 const text = ref<string>("");
 
 function search() {
-  let title = cards.map((item) => item.title);
+  let title = card.map((item) => item.title);
 
   return title.filter((item) =>
     item.toLowerCase().includes(text.value.toLowerCase())
@@ -27,10 +30,9 @@ function selectCard(id: number) {
 
 const getCard = computed<any>(() => {
   return search().map((searchs: any) => {
-    return cards.find((name: any) => name.title === searchs);
+    return card.find((name: any) => name.title === searchs);
   });
 });
-
 </script>
 
 <template>
@@ -48,12 +50,29 @@ const getCard = computed<any>(() => {
       <Card
         v-for="card in getCard"
         :key="card.id"
+        context
         :title="card.title"
-        :persona="card.persona"
         :imageMain="card.imageMain"
+        :persona="card.persona"
         :imagePersona="card.imagePersona"
         @selectCard="selectCard(card.id)"
       />
+    </div>
+
+    <h2 class="text-left font-bold text-base py-4 flex">
+      <img src="@/assets/emoji/fire.png" alt="fire" class="pr-1" /> Hot bid
+    </h2>
+
+    <div>
+      <div class="flex gap-4 overflow-x-auto">
+        <Card
+          v-for="card in cardsHots"
+          :key="card.id"
+          :title="card.title"
+          :imageMain="card.imageMain"
+          @selectCard="selectCard(card.id)"
+        />
+      </div>
     </div>
   </div>
 </template>
