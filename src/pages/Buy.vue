@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
-import cards from "@/utils/utils-card";
+import { cards } from "@/utils/utils-card";
 import Button from "@/components/Button/Button.vue";
 import Modal from "@/components/Modal/Modal.vue";
 
 defineEmits<{ (e: "onClick"): void }>();
+
+const card = cards();
 
 const { id } = defineProps<{ id: number | string }>();
 const modal = ref<boolean>(false);
@@ -14,7 +16,7 @@ const notice = ref<string>(
 );
 
 const getCard = computed<any>(() => {
-  return cards.find((item) => item.id == id);
+  return card.find((item) => item.id == id);
 });
 
 function pageTopScroll() {
