@@ -134,7 +134,7 @@ export function cards() {
       id: 10,
       title: "Bubbles",
       persona: "Akan Park",
-      type: "hot",
+      type: "standard",
       imageMain: "src/assets/card/hot-art03.png",
       imagePersona: "src/assets/card/person.png",
       definitions: ["color", "circle", "black", "art"],
@@ -153,19 +153,6 @@ export function cards() {
       definitions: ["color", "circle", "draw", "art"],
       value: 1.52,
       dolar: 2.707,
-      describe:
-        "Together with my design team, we designed this futuristic Cyberyacht concept artwork. We wanted to create something that has not been created yet, so we started to collect ideas of how we imagine the Cyberyacht could look like in the future.",
-    },
-    {
-      id: 12,
-      title: "Green Bubbles",
-      persona: "Hulk Fun",
-      type: "hot",
-      imageMain: "src/assets/card/hot-art05.png",
-      imagePersona: "src/assets/card/person.png",
-      definitions: ["color", "art"],
-      value: 1.0,
-      dolar: 2.502,
       describe:
         "Together with my design team, we designed this futuristic Cyberyacht concept artwork. We wanted to create something that has not been created yet, so we started to collect ideas of how we imagine the Cyberyacht could look like in the future.",
     },

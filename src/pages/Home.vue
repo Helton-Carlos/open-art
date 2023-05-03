@@ -35,7 +35,7 @@ const getCard = computed<any>(() => {
 });
 
 const hotCard = computed<any>(() => {
-  return card.filter((cards) => cards.type === "hot")
+  return card.filter((cards) => cards.type === "hot");
 });
 </script>
 
@@ -67,14 +67,13 @@ const hotCard = computed<any>(() => {
       <img src="@/assets/emoji/fire.png" alt="fire" class="pr-1" /> Hot bid
     </h2>
 
-    <div>
-      <div class="flex gap-4 overflow-x-auto">
+    <div class="w-full flex overflow-x-auto space-x-4">
+      <div class="flex-shrink-0" v-for="card in hotCard" :key="card.id">
         <Card
-          v-for="cards in hotCard"
-          :key="cards.id"
-          :title="cards.title"
-          :imageMain="cards.imageMain"
-          @selectCard="selectCard(cards.id)"
+          class="w-[220px]"
+          :title="card.title"
+          :imageMain="card.imageMain"
+          @selectCard="selectCard(card.id)"
         />
       </div>
     </div>
