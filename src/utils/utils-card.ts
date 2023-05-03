@@ -4,6 +4,7 @@ export function cards() {
       id: 0,
       title: "Silent Wave",
       persona: "Creator",
+      type: "standard",
       imageMain: "src/assets/card/art01.png",
       imagePersona: "src/assets/card/person.png",
       definitions: ["color", "circle", "black", "art"],
@@ -16,6 +17,7 @@ export function cards() {
       id: 1,
       title: "Silent Color",
       persona: "Creator102",
+      type: "standard",
       imageMain: "src/assets/card/art02.png",
       imagePersona: "src/assets/card/person.png",
       definitions: ["color", "art"],
@@ -28,6 +30,7 @@ export function cards() {
       id: 2,
       title: "Pawel Czerwinski",
       persona: "Pawel Czerwinski",
+      type: "hot",
       imageMain: "src/assets/card/art03.png",
       imagePersona: "src/assets/card/person.png",
       definitions: ["color", "circle", "black", "art"],
@@ -40,6 +43,7 @@ export function cards() {
       id: 3,
       title: "Man Wave",
       persona: "Openart",
+      type: "hot",
       imageMain: "src/assets/card/art04.png",
       imagePersona: "src/assets/card/person.png",
       definitions: ["color", "circle", "draw", "art"],
@@ -52,6 +56,7 @@ export function cards() {
       id: 4,
       title: "Calice",
       persona: "Openart",
+      type: "hot",
       imageMain: "src/assets/card/art05.png",
       imagePersona: "src/assets/card/person.png",
       definitions: ["color", "art"],
@@ -64,6 +69,7 @@ export function cards() {
       id: 5,
       title: "Mirror",
       persona: "Openart",
+      type: "hot",
       imageMain: "src/assets/card/art06.png",
       imagePersona: "src/assets/card/person.png",
       definitions: ["color", "circle", "draw", "art"],
@@ -76,6 +82,7 @@ export function cards() {
       id: 6,
       title: "Shedd Aquarium",
       persona: "Openart",
+      type: "hot",
       imageMain: "src/assets/card/art07.png",
       imagePersona: "src/assets/card/person.png",
       definitions: ["color", "circle", "draw", "art"],
@@ -88,6 +95,7 @@ export function cards() {
       id: 7,
       title: "Family Lego",
       persona: "Openart",
+      type: "hot",
       imageMain: "src/assets/card/art08.png",
       imagePersona: "src/assets/card/person.png",
       definitions: ["color", "draw"],
@@ -96,17 +104,11 @@ export function cards() {
       describe:
         "Together with my design team, we designed this futuristic Cyberyacht concept artwork. We wanted to create something that has not been created yet, so we started to collect ideas of how we imagine the Cyberyacht could look like in the future.",
     },
-  ];
-
-  return cards;
-}
-
-export function cardsHot() {
-  const cardsHot = [
     {
-      id: 0,
-      title: "Silent Wave",
+      id: 8,
+      title: "Green Paint",
       persona: "Creator",
+      type: "standard",
       imageMain: "src/assets/card/hot-art01.png",
       imagePersona: "src/assets/card/person.png",
       definitions: ["color", "circle", "black", "art"],
@@ -116,9 +118,10 @@ export function cardsHot() {
         "Together with my design team, we designed this futuristic Cyberyacht concept artwork. We wanted to create something that has not been created yet, so we started to collect ideas of how we imagine the Cyberyacht could look like in the future.",
     },
     {
-      id: 1,
-      title: "Silent Color",
-      persona: "Creator102",
+      id: 9,
+      title: "Field woman",
+      persona: "Lucia Almeida",
+      type: "standard",
       imageMain: "src/assets/card/hot-art02.png",
       imagePersona: "src/assets/card/person.png",
       definitions: ["color", "art"],
@@ -128,9 +131,10 @@ export function cardsHot() {
         "On Foundation, anyone can create a profile to start collecting NFTs. All you’ll need is a MetaMask wallet and ETH, the cryptocurrency used to pay for all transactions on Ethereum. Artists list NFTs for auction at a reserve price, and once the first bid is placed, a 24-hour auction countdown begins. If a bid is placed within the last 15 minutes, the auction extends for another 15 minutes.",
     },
     {
-      id: 2,
-      title: "Pawel Czerwinski",
-      persona: "Pawel Czerwinski",
+      id: 10,
+      title: "Bubbles",
+      persona: "Akan Park",
+      type: "hot",
       imageMain: "src/assets/card/hot-art03.png",
       imagePersona: "src/assets/card/person.png",
       definitions: ["color", "circle", "black", "art"],
@@ -140,9 +144,10 @@ export function cardsHot() {
         "On Foundation, anyone can create a profile to start collecting NFTs. All you’ll need is a MetaMask wallet and ETH, the cryptocurrency used to pay for all transactions on Ethereum. Artists list NFTs for auction at a reserve price, and once the first bid is placed, a 24-hour auction countdown begins. If a bid is placed within the last 15 minutes, the auction extends for another 15 minutes.",
     },
     {
-      id: 3,
-      title: "Man Wave",
-      persona: "Openart",
+      id: 11,
+      title: "hot iron",
+      persona: "Dennis Travel",
+      type: "standard",
       imageMain: "src/assets/card/hot-art04.png",
       imagePersona: "src/assets/card/person.png",
       definitions: ["color", "circle", "draw", "art"],
@@ -152,9 +157,10 @@ export function cardsHot() {
         "Together with my design team, we designed this futuristic Cyberyacht concept artwork. We wanted to create something that has not been created yet, so we started to collect ideas of how we imagine the Cyberyacht could look like in the future.",
     },
     {
-      id: 4,
-      title: "Calice",
-      persona: "Openart",
+      id: 12,
+      title: "Green Bubbles",
+      persona: "Hulk Fun",
+      type: "hot",
       imageMain: "src/assets/card/hot-art05.png",
       imagePersona: "src/assets/card/person.png",
       definitions: ["color", "art"],
@@ -165,5 +171,5 @@ export function cardsHot() {
     },
   ];
 
-  return cardsHot;
+  return cards;
 }

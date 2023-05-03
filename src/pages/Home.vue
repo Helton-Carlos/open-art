@@ -4,16 +4,16 @@ import { ref, computed } from "vue";
 import Title from "@/components/Title/Title.vue";
 import InputSearc from "@/components/InputSearc/InputSearc.vue";
 import Card from "@/components/Card/Card.vue";
-import { cards, cardsHot } from "@/utils/utils-card";
+import { cards } from "@/utils/utils-card";
 
 const route = useRoute();
 const router = useRouter();
 
 const card = cards();
-const cardsHots = cardsHot();
 
 const title = route.meta.title;
 const subTitle = route.meta.subTitle;
+
 const text = ref<string>("");
 
 function search() {
@@ -32,6 +32,10 @@ const getCard = computed<any>(() => {
   return search().map((searchs: any) => {
     return card.find((name: any) => name.title === searchs);
   });
+});
+
+const hotCard = computed<any>(() => {
+  return card.filter((cards) => cards.type === "hot")
 });
 </script>
 
@@ -66,11 +70,11 @@ const getCard = computed<any>(() => {
     <div>
       <div class="flex gap-4 overflow-x-auto">
         <Card
-          v-for="card in cardsHots"
-          :key="card.id"
-          :title="card.title"
-          :imageMain="card.imageMain"
-          @selectCard="selectCard(card.id)"
+          v-for="cards in hotCard"
+          :key="cards.id"
+          :title="cards.title"
+          :imageMain="cards.imageMain"
+          @selectCard="selectCard(cards.id)"
         />
       </div>
     </div>
