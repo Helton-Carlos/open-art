@@ -70,7 +70,7 @@ const hotCard = computed<any>(() => {
     <div class="w-full flex overflow-x-auto space-x-4">
       <div class="flex-shrink-0" v-for="card in hotCard" :key="card.id">
         <Card
-          class="w-[220px]"
+          class="w-[180px]"
           :title="card.title"
           :imageMain="card.imageMain"
           @selectCard="selectCard(card.id)"
