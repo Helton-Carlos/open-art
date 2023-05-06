@@ -31,7 +31,7 @@ const users = computed<any>(() => {
         <h2 class="pt-4 font-bold capitalize">{{ users.name }}</h2>
         <p class="font-bold text-gray">{{ users.email }}</p>
 
-        <div class="flex items-center mt-4">
+        <div class="flex justify-center items-center mt-4">
           <p class="font-bold">Followed by</p>
           <div class="flex flex-row-reverse md:mt-2 lg:mt-0">
             <span
@@ -62,6 +62,35 @@ const users = computed<any>(() => {
               />
             </span>
           </div>
+        </div>
+
+        <div class="flex my-4 gap-4">
+          <a
+            :href="users.instagram"
+            alt="instagram"
+            target="_blank"
+            class="flex items-center capitalize btn-secundary font-medium"
+          >
+            <img
+              src="@/assets/profile/instagram.svg"
+              alt="instagram"
+              class="pr-1"
+            />
+            instagram</a
+          >
+
+          <a
+            :href="users.linkedin"
+            alt="linkedin"
+            target="_blank"
+            class="flex items-center capitalize btn-secundary font-medium"
+          >
+            <img
+              src="@/assets/profile/linkedIn.svg"
+              alt="linkedin"
+              class="pr-1"
+            />linkedin</a
+          >
         </div>
       </div>
     </div>

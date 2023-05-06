@@ -22,6 +22,10 @@ span {
   @apply bg-gradient-to-r from-primary to-blue text-white;
 }
 
+.btn-secundary {
+  @apply bg-gray-light shadow-lg text-gray-dark py-1 px-4 rounded-3xl hover:bg-blue hover:transition-all ;
+}
+
 .card {
   @apply p-4 mb-4 bg-white rounded-lg shadow-lg;
 }
