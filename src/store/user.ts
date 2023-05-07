@@ -1,3 +1,4 @@
+import { log } from "console";
 import { defineStore } from "pinia";
 
 interface State {
@@ -24,12 +25,22 @@ export const useUserStore = defineStore("user", {
   },
   actions: {
     userStorage() {
-      const logar = JSON.parse(localStorage.getItem("user"));
-      if (
-        logar.email === this.users?.email &&
-        logar.name === this.users?.name
-      ) {
-        return this.users;
+      const local = localStorage.getItem("user");
+
+      if (local) {
+        const jsonLocal = JSON.parse(localStorage.getItem("user") || "");
+
+        if (
+          jsonLocal.email === this.users?.email &&
+          jsonLocal.name === this.users?.name
+        ) {
+          return this.users;
+        } else {
+          return false;
+        }
+        
+      } else {
+        return false;
       }
     },
   },

@@ -6,13 +6,14 @@ import Title from "@/components/Title/Title.vue";
 
 const route = useRoute();
 
-const user = useUserStore();
+const store = useUserStore();
+const user = store.userStorage();
 
 const title = route.meta.title;
 const subTitle = route.meta.subTitle;
 
 const users = computed<any>(() => {
-  return user.users;
+  return user;
 });
 </script>
 

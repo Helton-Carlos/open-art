@@ -1,10 +1,18 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, computed } from "vue";
+import { useUserStore } from "@/store/user";
 import { useRouter } from "vue-router";
 import Menu from "@/components/Menu/Menu.vue";
 
 const menu = ref<boolean>(false);
 const router = useRouter();
+
+const store = useUserStore();
+const user = store.userStorage();
+
+const users = computed<any>(() => {
+  return user;
+});
 
 function toggleMenu() {
   menu.value = !menu.value;
@@ -26,12 +34,20 @@ function menuIndex() {
         alt="Logo"
         @click="menuIndex"
       />
-      <img
-        class="cursor-pointer"
-        src="@/assets/navbar/Menu.svg"
-        alt="Menu"
-        @click="toggleMenu"
-      />
+      <div class="flex gap-2">
+        <img
+          v-if="users"
+          src="@/assets/navbar/People.svg"
+          alt="People"
+        />
+
+        <img
+          class="cursor-pointer"
+          src="@/assets/navbar/Menu.svg"
+          alt="Menu"
+          @click="toggleMenu"
+        />
+      </div>
     </div>
   </div>
 </template>
