@@ -43,7 +43,7 @@ export function cards() {
       id: 3,
       title: "Man Wave",
       persona: "Openart",
-      type: "hot",
+      type: "standard",
       imageMain: "src/assets/card/art04.png",
       imagePersona: "src/assets/card/person.png",
       definitions: ["color", "circle", "draw", "art"],

@@ -1,10 +1,10 @@
 <script setup lang="ts">
+import { cards } from "@/utils/utils-card";
 import { useRoute, useRouter } from "vue-router";
 import { ref, computed } from "vue";
 import Title from "@/components/Title/Title.vue";
 import InputSearc from "@/components/InputSearc/InputSearc.vue";
 import Card from "@/components/Card/Card.vue";
-import { cards } from "@/utils/utils-card";
 
 const route = useRoute();
 const router = useRouter();
