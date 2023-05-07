@@ -1,6 +1,5 @@
-import { log } from "console";
 import { defineStore } from "pinia";
-
+import { UserInfo } from "@/utils/user-info";
 interface State {
   users: UserInfo | null;
 }
@@ -45,15 +44,3 @@ export const useUserStore = defineStore("user", {
     },
   },
 });
-interface UserInfo {
-  name: string;
-  email: string;
-  money: string;
-  image?: string;
-  instagram?: string;
-  linkedin?: string;
-  following: number;
-  followers: number;
-  since: number;
-  context?: string;
-}
