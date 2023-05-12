@@ -27,7 +27,7 @@ export const useUserStore = defineStore("user", {
       const local = localStorage.getItem("user");
 
       if (local) {
-        const jsonLocal = JSON.parse(localStorage.getItem("user") || "");
+        const jsonLocal = JSON.parse(local || "");
 
         if (
           jsonLocal.email === this.users?.email &&
