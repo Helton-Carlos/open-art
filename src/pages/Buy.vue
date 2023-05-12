@@ -1,15 +1,22 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
+import { useUserStore } from "@/store/user";
 import { cards } from "@/utils/utils-card";
 import Button from "@/components/Button/Button.vue";
 import Modal from "@/components/Modal/Modal.vue";
+import ModalBuy from "@/components/ModalBuy/ModalBuy.vue";
 
 defineEmits<{ (e: "onClick"): void }>();
 
 const card = cards();
 
+const store = useUserStore();
+const user = store.userStorage();
+
 const { id } = defineProps<{ id: number | string }>();
 const modal = ref<boolean>(false);
+
+const modalBuy = ref<boolean>(false);
 
 const notice = ref<string>(
   "Once a bid has been placed and the reserve price has been met, a 24 hour auction for this artwork will begin."
@@ -25,11 +32,16 @@ function pageTopScroll() {
 
 function buy() {
   pageTopScroll();
-  modal.value = true;
+  if(user) {
+    modalBuy.value = true;
+  } else {
+    modal.value = true;
+  }
 }
 
 function closeModal() {
   modal.value = false;
+  modalBuy.value = false;
 }
 
 pageTopScroll();
@@ -78,7 +90,7 @@ pageTopScroll();
         </p>
 
         <Button title="Place a bid" color="standard" @onClick="buy" />
-
+      
         <Modal
           v-show="modal"
           title="You are not logged in!"
@@ -86,6 +98,15 @@ pageTopScroll();
           titleButton="Ok"
           notice
           @onClick="closeModal"
+        />
+
+        <ModalBuy
+          v-show="modalBuy"
+          title="Place a bid"
+          :id="id"
+          :user="user"
+          notice
+          @toggleModal="closeModal"
         />
       </div>
     </div>
