@@ -10,7 +10,7 @@ defineEmits<{
 
 <template>
   <div
-    class="w-full card cursor-pointer sm:w-[290px] hover:opacity-75"
+    class="w-full card cursor-pointer sm:w-[290px] hover:scale-105 hover:opacity-75"
     @click="$emit('selectCard')"
   >
     <div>
