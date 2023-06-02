@@ -8,7 +8,7 @@ defineProps<IModal>();
 
 defineEmits<{ (e: "onClick"): void }>();
 
-const close = ref<boolean>(false)
+const close = ref<boolean>(false);
 
 const router = useRouter();
 
@@ -41,7 +41,11 @@ function logar() {
         </p>
 
         <div class="flex justify-center mt-2 mx-auto">
-          <Button :title="titleButton" color="standard"  @onClick="$emit('onClick')" />
+          <Button
+            :title="titleButton"
+            color="standard"
+            @onClick="$emit('onClick')"
+          />
           <Button title="No" :onClick="logar" v-if="!notice" />
         </div>
       </div>

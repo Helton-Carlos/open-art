@@ -11,7 +11,7 @@ const subTitle = route.meta.subTitle;
 <template>
   <div class="containner my-4 text-center">
     <Title :title="title" :subTitle="subTitle" />
-    <div class="text-left card ">
+    <div class="text-left card">
       <h4 class="font-bold text-base py-4">Contact us</h4>
       <p>Rua Sete de Setembro, 1329</p>
       <p>Vila Estádio - Presidente Prudente, SP</p>

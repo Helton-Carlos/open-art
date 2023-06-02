@@ -36,7 +36,10 @@ defineEmits<{
       >
       <div class="mb-3 flex items-center justify-between p-2 md:items-start">
         <div class="mb-2">
-          <p class="text-lg text-gray-dark font-bold text-navy-700" data-testid="persona-id">
+          <p
+            class="text-lg text-gray-dark font-bold text-navy-700"
+            data-testid="persona-id"
+          >
             {{ persona }}
           </p>
         </div>
@@ -49,7 +52,7 @@ defineEmits<{
               class="h-full w-full rounded-full object-cover"
               src="https://horizon-tailwind-react-git-tailwind-components-horizon-ui.vercel.app/static/media/avatar1.eeef2af6dfcd3ff23cb8.png"
               alt="person"
-              data-testid="imagePersona-id" 
+              data-testid="imagePersona-id"
             />
           </span>
           <span class="z-10 -mr-3 h-8 w-8 rounded-full border-2 border-white">

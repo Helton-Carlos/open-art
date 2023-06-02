@@ -17,7 +17,7 @@ const password = ref<string>("");
 
 const textError = ref<string>("*Fill in all fields!");
 
-const error = ref<boolean>(false)
+const error = ref<boolean>(false);
 
 function registerCustomer() {
   error.value = false;
@@ -44,9 +44,19 @@ function registerCustomer() {
     <Title :title="title" :subTitle="subTitle" />
 
     <form @submit.prevent="registerCustomer">
-      <InputSearc placeholder="Name" type="text" v-model:modelValue="name" :error="error" />
+      <InputSearc
+        placeholder="Name"
+        type="text"
+        v-model:modelValue="name"
+        :error="error"
+      />
 
-      <InputSearc placeholder="E-mail" type="text" v-model:modelValue="email" :error="error" />
+      <InputSearc
+        placeholder="E-mail"
+        type="text"
+        v-model:modelValue="email"
+        :error="error"
+      />
 
       <InputSearc
         placeholder="Password"
@@ -57,7 +67,9 @@ function registerCustomer() {
 
       <Button title="Create account" color="standard" />
 
-      <p v-show="error" class="text-error font-extrabold underline pt-4">{{ textError }}</p>
+      <p v-show="error" class="text-error font-extrabold underline pt-4">
+        {{ textError }}
+      </p>
     </form>
   </div>
 </template>

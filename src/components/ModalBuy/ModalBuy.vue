@@ -11,7 +11,6 @@ const router = useRouter();
 
 function logar() {
   router.push({ name: "home" });
-  console.log(id);
 }
 </script>
 

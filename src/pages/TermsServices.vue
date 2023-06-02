@@ -6,7 +6,6 @@ const route = useRoute();
 
 const title = route.meta.title;
 const subTitle = route.meta.subTitle;
-
 </script>
 
 <template>

@@ -6,7 +6,7 @@ import Menu from "@/components/Menu/Menu.vue";
 
 const menu = ref<boolean>(false);
 const router = useRouter();
- 
+
 const store = useUserStore();
 const user = store.userStorage();
 
@@ -23,7 +23,7 @@ function menuIndex() {
 <template>
   <div>
     <Menu v-show="menu" @close="toggleMenu" @indexRoute="menuIndex" />
-    
+
     <div class="w-11/12 mx-auto mt-4 flex justify-between">
       <img
         class="cursor-pointer"
@@ -32,11 +32,7 @@ function menuIndex() {
         @click="menuIndex"
       />
       <div class="flex gap-2">
-        <img
-          v-if="user"
-          src="@/assets/navbar/People.svg"
-          alt="People"
-        />
+        <img v-if="user" src="@/assets/navbar/People.svg" alt="People" />
 
         <img
           class="cursor-pointer"

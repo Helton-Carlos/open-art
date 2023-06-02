@@ -32,7 +32,7 @@ function pageTopScroll() {
 
 function buy() {
   pageTopScroll();
-  if(user) {
+  if (user) {
     modalBuy.value = true;
   } else {
     modal.value = true;
@@ -90,7 +90,7 @@ pageTopScroll();
         </p>
 
         <Button title="Place a bid" color="standard" @onClick="buy" />
-      
+
         <Modal
           v-show="modal"
           title="You are not logged in!"

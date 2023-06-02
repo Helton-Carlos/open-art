@@ -9,7 +9,7 @@ function createAccount() {
 }
 
 function logout() {
-  localStorage.clear()
+  localStorage.clear();
 }
 
 defineEmits<{

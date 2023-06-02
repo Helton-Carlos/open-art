@@ -12,7 +12,7 @@ defineEmits<{ (e: "onClick"): void }>();
       class="px-7 py-1 rounded drop-shadow-md font-medium"
       :class="{
         'btn-standard': color == 'standard',
-        'underline': color == 'null',
+        underline: color == 'null',
       }"
       @click="$emit('onClick')"
     >
