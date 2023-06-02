@@ -13,7 +13,7 @@ const card = cards();
 const store = useUserStore();
 const user = store.userStorage();
 
-const { id } = defineProps<{ id: number | string }>();
+const { id } = defineProps<{ id: number }>();
 const modal = ref<boolean>(false);
 
 const modalBuy = ref<boolean>(false);
@@ -32,11 +32,7 @@ function pageTopScroll() {
 
 function buy() {
   pageTopScroll();
-  if (user) {
-    modalBuy.value = true;
-  } else {
-    modal.value = true;
-  }
+  user ? modalBuy.value = true : modal.value = true
 }
 
 function closeModal() {
@@ -99,12 +95,12 @@ pageTopScroll();
           notice
           @onClick="closeModal"
         />
-
+{{ user }}
         <ModalBuy
           v-show="modalBuy"
           title="Place a bid"
           :id="id"
-          :user="user"
+          :user?="user"
           notice
           @toggleModal="closeModal"
         />
