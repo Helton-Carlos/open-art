@@ -21,7 +21,8 @@ describe("Card component", () => {
         title: 'Open Arts',
         persona: 'Author',
         imageMain: '@/assets/art.png',
-        imagePersona:  '@/assets/person.png'
+        imagePersona:  '@/assets/person.png',
+        context: true
       },
     });
    
