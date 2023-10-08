@@ -20,7 +20,7 @@ function search() {
   let title = card.map((item) => item.title);
 
   return title.filter((item) =>
-    item.toLowerCase().includes(text.value.toLowerCase())
+    item.toLowerCase().includes(text.value.toLowerCase()),
   );
 }
 
@@ -61,6 +61,10 @@ const hotCard = computed<any>(() => {
         :imagePersona="card.imagePersona"
         @selectCard="selectCard(card.id)"
       />
+
+      <p v-show="!getCard.length" class="font-medium">
+        I didn't find any cards...
+      </p>
     </div>
 
     <h2 class="text-left font-bold text-base py-4 flex">
