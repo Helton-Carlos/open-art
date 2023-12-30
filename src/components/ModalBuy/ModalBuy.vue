@@ -1,16 +1,19 @@
 <script setup lang="ts">
-import type { IModalBuy } from "./ModalBuy";
-import { useRouter } from "vue-router";
-import Button from "../Button/Button.vue";
+import type { IModalBuy } from './ModalBuy';
+import { useRouter } from 'vue-router';
+import Button from '../Button/Button.vue';
 
 defineProps<IModalBuy>();
 
-defineEmits<{ (e: "onClick"): void }>();
+defineEmits<{
+  (e: 'toggleModal'): void;
+  (e: 'onClick'): void;
+}>();
 
 const router = useRouter();
 
 function logar() {
-  router.push({ name: "home" });
+  router.push({ name: 'home' });
 }
 </script>
 

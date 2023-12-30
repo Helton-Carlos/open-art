@@ -1,3 +1,17 @@
+import person from '../assets/card/person.png';
+import art01 from '../assets/card/art01.png';
+import art02 from '../assets/card/art02.png';
+import art03 from '../assets/card/art03.png';
+import art04 from '../assets/card/art04.png';
+import art05 from '../assets/card/art05.png';
+import art06 from '../assets/card/art06.png';
+import art07 from '../assets/card/art07.png';
+import art08 from '../assets/card/art08.png';
+import art09 from '../assets/card/hot-art01.png';
+import art10 from '../assets/card/hot-art02.png';
+import art11 from '../assets/card/hot-art03.png';
+import art12 from '../assets/card/hot-art04.png';
+
 export function cards() {
   const cards = [
     {
@@ -5,8 +19,8 @@ export function cards() {
       title: "Silent Wave",
       persona: "Creator",
       type: "standard",
-      imageMain: "src/assets/card/art01.png",
-      imagePersona: "src/assets/card/person.png",
+      imageMain: art01,
+      imagePersona: person,
       definitions: ["color", "circle", "black", "art"],
       value: 1.5,
       dolar: 2.683,
@@ -18,8 +32,8 @@ export function cards() {
       title: "Silent Color",
       persona: "Creator102",
       type: "standard",
-      imageMain: "src/assets/card/art02.png",
-      imagePersona: "src/assets/card/person.png",
+      imageMain: art02,
+      imagePersona: person,
       definitions: ["color", "art"],
       value: 1.55,
       dolar: 2.773,
@@ -31,8 +45,8 @@ export function cards() {
       title: "Pawel Czerwinski",
       persona: "Pawel Czerwinski",
       type: "hot",
-      imageMain: "src/assets/card/art03.png",
-      imagePersona: "src/assets/card/person.png",
+      imageMain: art03,
+      imagePersona: person,
       definitions: ["color", "circle", "black", "art"],
       value: 1.03,
       dolar: 2.201,
@@ -44,8 +58,8 @@ export function cards() {
       title: "Man Wave",
       persona: "Openart",
       type: "standard",
-      imageMain: "src/assets/card/art04.png",
-      imagePersona: "src/assets/card/person.png",
+      imageMain: art04,
+      imagePersona: person,
       definitions: ["color", "circle", "draw", "art"],
       value: 1.52,
       dolar: 2.707,
@@ -57,8 +71,8 @@ export function cards() {
       title: "Calice",
       persona: "Openart",
       type: "hot",
-      imageMain: "src/assets/card/art05.png",
-      imagePersona: "src/assets/card/person.png",
+      imageMain: art05,
+      imagePersona: person,
       definitions: ["color", "art"],
       value: 1.0,
       dolar: 2.502,
@@ -70,8 +84,8 @@ export function cards() {
       title: "Mirror",
       persona: "Openart",
       type: "hot",
-      imageMain: "src/assets/card/art06.png",
-      imagePersona: "src/assets/card/person.png",
+      imageMain: art06,
+      imagePersona: person,
       definitions: ["color", "circle", "draw", "art"],
       value: 1.52,
       dolar: 2.707,
@@ -83,8 +97,8 @@ export function cards() {
       title: "Shedd Aquarium",
       persona: "Openart",
       type: "hot",
-      imageMain: "src/assets/card/art07.png",
-      imagePersona: "src/assets/card/person.png",
+      imageMain: art07,
+      imagePersona: person,
       definitions: ["color", "circle", "draw", "art"],
       value: 1.41,
       dolar: 2.599,
@@ -96,8 +110,8 @@ export function cards() {
       title: "Family Lego",
       persona: "Openart",
       type: "hot",
-      imageMain: "src/assets/card/art08.png",
-      imagePersona: "src/assets/card/person.png",
+      imageMain: art08,
+      imagePersona: person,
       definitions: ["color", "draw"],
       value: 1.81,
       dolar: 3.0,
@@ -109,8 +123,8 @@ export function cards() {
       title: "Green Paint",
       persona: "Creator",
       type: "standard",
-      imageMain: "src/assets/card/hot-art01.png",
-      imagePersona: "src/assets/card/person.png",
+      imageMain: art09,
+      imagePersona: person,
       definitions: ["color", "circle", "black", "art"],
       value: 1.5,
       dolar: 2.683,
@@ -122,8 +136,8 @@ export function cards() {
       title: "Field woman",
       persona: "Lucia Almeida",
       type: "standard",
-      imageMain: "src/assets/card/hot-art02.png",
-      imagePersona: "src/assets/card/person.png",
+      imageMain: art10,
+      imagePersona: person,
       definitions: ["color", "art"],
       value: 1.55,
       dolar: 2.773,
@@ -135,8 +149,8 @@ export function cards() {
       title: "Bubbles",
       persona: "Akan Park",
       type: "standard",
-      imageMain: "src/assets/card/hot-art03.png",
-      imagePersona: "src/assets/card/person.png",
+      imageMain: art11,
+      imagePersona: person,
       definitions: ["color", "circle", "black", "art"],
       value: 1.03,
       dolar: 2.201,
@@ -148,8 +162,8 @@ export function cards() {
       title: "hot iron",
       persona: "Dennis Travel",
       type: "standard",
-      imageMain: "src/assets/card/hot-art04.png",
-      imagePersona: "src/assets/card/person.png",
+      imageMain: art12,
+      imagePersona: person,
       definitions: ["color", "circle", "draw", "art"],
       value: 1.52,
       dolar: 2.707,

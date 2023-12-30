@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import type { ICard } from "./Card";
+import type { ICard } from './Card';
 
 defineProps<ICard>();
 
 defineEmits<{
-  (e: "selectCard"): void;
+  (e: 'selectCard'): void;
 }>();
 </script>
 

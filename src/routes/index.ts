@@ -83,7 +83,7 @@ const routes: Array<RouteRecordRaw> = [
     }
   },
   {
-    path: "/:id",
+    path: "/buy/:id",
     name: "buy",
     props: true,
     component: () => import("../pages/Buy.vue")

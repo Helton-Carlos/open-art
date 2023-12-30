@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { computed, ref } from "vue";
-import { useUserStore } from "@/store/user";
-import { cards } from "@/utils/utils-card";
-import Button from "@/components/Button/Button.vue";
-import Modal from "@/components/Modal/Modal.vue";
-import ModalBuy from "@/components/ModalBuy/ModalBuy.vue";
+import { computed, ref } from 'vue';
+import { useUserStore } from '@/store/user';
+import { cards } from '@/utils/utils-card';
+import Button from '@/components/Button/Button.vue';
+import Modal from '@/components/Modal/Modal.vue';
+import ModalBuy from '@/components/ModalBuy/ModalBuy.vue';
 
-defineEmits<{ (e: "onClick"): void }>();
+defineEmits<{ (e: 'onClick'): void }>();
 
 const card = cards();
 
@@ -19,7 +19,7 @@ const modal = ref<boolean>(false);
 const modalBuy = ref<boolean>(false);
 
 const notice = ref<string>(
-  "Once a bid has been placed and the reserve price has been met, a 24 hour auction for this artwork will begin."
+  'Once a bid has been placed and the reserve price has been met, a 24 hour auction for this artwork will begin.',
 );
 
 const getCard = computed<any>(() => {
@@ -32,7 +32,7 @@ function pageTopScroll() {
 
 function buy() {
   pageTopScroll();
-  user ? modalBuy.value = true : modal.value = true
+  user ? (modalBuy.value = true) : (modal.value = true);
 }
 
 function closeModal() {
@@ -95,12 +95,12 @@ pageTopScroll();
           notice
           @onClick="closeModal"
         />
-{{ user }}
+
         <ModalBuy
           v-show="modalBuy"
           title="Place a bid"
           :id="id"
-          :user?="user"
+          user="user"
           notice
           @toggleModal="closeModal"
         />
