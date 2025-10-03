@@ -1,47 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 body {
   background-color: #ffffff;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-p,
-span {
+* {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-}
-
-.btn-standard {
-  @apply bg-gradient-to-r from-primary to-blue text-white;
-}
-
-.btn-secundary {
-  @apply bg-gray-light shadow-lg text-gray-dark py-1 px-4 rounded-3xl hover:bg-blue hover:transition-all ;
-}
-
-.card {
-  @apply p-4 mb-4 bg-white rounded-lg shadow-lg;
-}
-
-.menu {
-  @apply w-full h-screen bg-white rounded-lg shadow-lg overflow-hidden;
-}
-
-.inputOn {
-  @apply w-full my-8 block pl-5 py-2 text-sm text-gray-dark border border-gray-light rounded-lg bg-gray-light focus:border-primary focus:ring-primary focus:outline-none focus:ring focus:ring-opacity-40
-}
-
-.inputOff{
-  @apply w-full my-8 block pl-5 py-2 text-sm text-error border border-gray-light rounded-lg bg-gray-light focus:border-error ring-error outline-none ring ring-opacity-40
-}
-
-.containner {
-  @apply w-11/12 mx-auto;
 }
