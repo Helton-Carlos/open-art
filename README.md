@@ -1,4 +1,4 @@
-# Vue 3 + TypeScript + Vite + Tailwind + Testing library
+# Vue 3 + TypeScript + Vite + Tailwind 4 + Testing library
 
 **💬 About.** 
 
@@ -18,4 +18,12 @@ yarn
 yarn dev
 ```
 
-![image](https://github.com/user-attachments/assets/65cd3635-fd57-48b2-9a5d-7e6d4d2a9f14)
+**🧪 Test.** 
+
+```bash
+yarn test
+```
+
+**📷 Image.** 
+
+<img width="1968" height="909" alt="Group 427319231" src="https://github.com/user-attachments/assets/68ea75ba-08a7-470a-92dc-52ad929a25fe" />
