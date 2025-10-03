@@ -6,7 +6,10 @@ import Button from "../Button/Button.vue";
 
 defineProps<IModal>();
 
-defineEmits<{ (e: "onClick"): void }>();
+defineEmits<{ 
+  (e: "onClick"): void , 
+  (e: "toggleModal"): void
+}>();
 
 const close = ref<boolean>(false);
 

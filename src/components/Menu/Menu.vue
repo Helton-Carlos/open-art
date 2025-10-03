@@ -13,8 +13,8 @@ function logout() {
 }
 
 defineEmits<{
-  (e: "close", val: boolean): void;
-  (e: "indexRoute", val: boolean): void;
+  (e: "close"): void;
+  (e: "indexRoute"): void;
 }>();
 
 const route = [
