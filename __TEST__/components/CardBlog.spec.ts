@@ -1,5 +1,5 @@
 import { render} from "@testing-library/vue";
-import CardBlog from "./CardBlog.vue";
+import CardBlog from "../../src/components/CardBlog/CardBlog.vue";
 
 describe("CardBlog component", () => {
   test("Render CardBlog", () => {

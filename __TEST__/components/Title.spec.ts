@@ -1,5 +1,5 @@
 import { render } from "@testing-library/vue";
-import Title from "./Title.vue";
+import Title from "../../src/components/Title/Title.vue";
 
 describe("Title component", () => {
   test("Render Title", () => {

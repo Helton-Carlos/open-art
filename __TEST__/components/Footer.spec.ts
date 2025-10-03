@@ -1,5 +1,5 @@
 import { render } from "@testing-library/vue";
-import Footer from "./Footer.vue";
+import Footer from "../../src/components/Footer/Footer.vue";
 
 describe("Footer component", () => {
   test("Render Footer", () => {

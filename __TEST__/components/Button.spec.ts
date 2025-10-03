@@ -1,5 +1,5 @@
 import { render, fireEvent } from "@testing-library/vue";
-import Button from "./Button.vue";
+import Button from "../../src/components/Button/Button.vue";
 
 describe("Button component", () => {
   test("Render Button", () => {

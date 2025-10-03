@@ -1,5 +1,5 @@
 import { render } from "@testing-library/vue";
-import Modal from "./Modal.vue";
+import Modal from "../../src/components/Modal/Modal.vue";
 
 describe("Modal component", () => {
   test("Render Modal", () => {
