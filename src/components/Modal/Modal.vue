@@ -26,7 +26,7 @@ function logar() {
         <img
           v-if="close"
           class="cursor-pointer"
-          src="@/assets/navbar/Close.svg"
+          src="@/assets/image/navbar/Close.svg"
           alt="Menu"
           @click="$emit('toggleModal')"
         />

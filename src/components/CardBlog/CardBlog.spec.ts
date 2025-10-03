@@ -7,8 +7,8 @@ describe("CardBlog component", () => {
       props: {
         title: 'Open Arts',
         persona: 'Author',
-        imageMain: '@/assets/art.png',
-        imagePersona:  '@/assets/person.png'
+        imageMain: '@/assets/image/art.png',
+        imagePersona:  '@/assets/image/person.png'
       },
     });
 
@@ -20,8 +20,8 @@ describe("CardBlog component", () => {
       props: {
         title: 'Open Arts',
         persona: 'Author',
-        imageMain: '@/assets/art.png',
-        imagePersona:  '@/assets/person.png'
+        imageMain: '@/assets/image/art.png',
+        imagePersona:  '@/assets/image/person.png'
       },
     });
    

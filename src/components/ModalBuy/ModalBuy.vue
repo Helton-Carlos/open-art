@@ -34,7 +34,7 @@ function logar() {
               </p>
               <img
                 class="cursor-pointer"
-                src="@/assets/navbar/Close.svg"
+                src="@/assets/image/navbar/Close.svg"
                 alt="Menu"
                 @click="$emit('toggleModal')"
               />

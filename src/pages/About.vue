@@ -17,7 +17,7 @@ const miniCard = [
   <div class="containner my-4 text-center">
     <Title :title="title" :subTitle="subTitle" />
 
-    <img src="@/assets/about/processor.png" alt="processor" class="mx-auto" />
+    <img src="@/assets/image/about/processor.png" alt="processor" class="mx-auto" />
 
     <p>
       OpenArt help anyone create a beautiful website, landing page, app to

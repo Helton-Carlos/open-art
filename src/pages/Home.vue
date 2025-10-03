@@ -68,7 +68,7 @@ const hotCard = computed<any>(() => {
     </div>
 
     <h2 class="text-left font-bold text-base py-4 flex">
-      <img src="@/assets/emoji/fire.png" alt="fire" class="pr-1" /> Hot bid
+      <img src="@/assets/image/emoji/fire.png" alt="fire" class="pr-1" /> Hot bid
     </h2>
 
     <div class="w-full flex overflow-x-auto space-x-4">

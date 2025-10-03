@@ -73,7 +73,7 @@ const users = computed<any>(() => {
             class="flex items-center capitalize btn-secundary font-medium"
           >
             <img
-              src="@/assets/profile/instagram.svg"
+              src="@/assets/image/profile/instagram.svg"
               alt="instagram"
               class="pr-1"
             />
@@ -87,7 +87,7 @@ const users = computed<any>(() => {
             class="flex items-center capitalize btn-secundary font-medium"
           >
             <img
-              src="@/assets/profile/linkedIn.svg"
+              src="@/assets/image/profile/linkedIn.svg"
               alt="linkedin"
               class="pr-1"
             />linkedin</a

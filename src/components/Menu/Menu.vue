@@ -31,13 +31,13 @@ const route = [
       <div class="flex items-center justify-between mt-4 pb-8">
         <img
           class="cursor-pointer"
-          src="@/assets/navbar/Logo.svg"
+          src="@/assets/image/navbar/Logo.svg"
           alt="Logo"
           @click="$emit('indexRoute')"
         />
         <img
           class="cursor-pointer"
-          src="@/assets/navbar/Close.svg"
+          src="@/assets/image/navbar/Close.svg"
           alt="Menu"
           @click="$emit('close')"
         />

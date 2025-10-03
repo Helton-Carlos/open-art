@@ -38,7 +38,7 @@ defineEmits<{
         </div>
       </div>
       <div>
-        <img src="@/assets/card/heart.svg" alt="persona" />
+        <img src="@/assets/image/card/heart.svg" alt="persona" />
       </div>
     </div>
   </div>

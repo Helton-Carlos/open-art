@@ -4,7 +4,7 @@ import { createPinia } from 'pinia';
 import Router from "./routes/index";
 import Axios from "axios";
 import VueAxios from "vue-axios";
-import "./style.css";
+import "./assets/css/style.css";
 
 const Pinia = createPinia();
 
