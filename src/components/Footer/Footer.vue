@@ -11,13 +11,22 @@ const router = [
 
 <template>
   <footer class="w-full bg-black text-white">
-    <div class="flex justify-between p-7">
-      <div class="flex flex-col">
-        <a href="#" class="hover:text-gray">Instagram</a>
-        <a href="#" class="hover:text-gray">Twitter</a>
-        <a href="#" class="hover:text-gray">Discord</a>
-        <a href="#" class="hover:text-gray">Blog</a>
-      </div>
+    <div class="containner flex justify-between p-7">
+      <ul class=" flex flex-col">
+        <p class="text-secondary">Social networks:</p>
+        <li>
+          <a href="#" class="hover:text-gray">Instagram</a>
+        </li>
+         <li>
+          <a href="#" class="hover:text-gray">Twitter</a>
+        </li>
+         <li>
+          <a href="#" class="hover:text-gray">Discord</a>
+        </li>
+         <li>
+          <a href="#" class="hover:text-gray">Blog</a>
+        </li> 
+      </ul>
       <div class="flex flex-col">
         <router-link
           class="hover:text-gray"
@@ -27,9 +36,9 @@ const router = [
         >
       </div>
     </div>
+
     <hr class="bg-gray" />
-    <div class="py-2">
-      <span>© 2021 Openart</span>
-    </div>
+    
+    <span class="flex justify-center">© 2021 Openart</span>
   </footer>
 </template>

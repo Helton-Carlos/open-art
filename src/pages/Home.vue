@@ -50,7 +50,9 @@ const hotCard = computed<any>(() => {
       @update:model-value="search"
     />
 
-    <div class="sm:flex sm:justify-center sm:flex-wrap gap-6">
+    <h3 class="my-4 text-left font-bold text-base">🎨 Art</h3>
+
+    <div class="flex flex-wrap gap-2">
       <Card
         v-for="card in getCard"
         :key="card.id"

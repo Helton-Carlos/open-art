@@ -68,5 +68,5 @@ body {
 }
 
 .containner {
-  @apply w-11/12 mx-auto;
+  @apply w-[80%] mx-auto my-4 md:w-[1200px] lg:w-[1500px] ;
 }

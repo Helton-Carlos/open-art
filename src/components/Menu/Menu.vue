@@ -27,7 +27,7 @@ const route = [
 
 <template>
   <div class="menu">
-    <div class="w-11/12 mx-auto">
+    <div class="containner">
       <div class="flex items-center justify-between mt-4 pb-8">
         <img
           class="cursor-pointer"

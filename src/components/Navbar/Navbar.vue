@@ -22,17 +22,27 @@ function menuIndex() {
 
 <template>
   <div>
-    <Menu v-show="menu" @close="toggleMenu" @indexRoute="menuIndex" />
+    <Menu 
+      v-show="menu" 
+      @close="toggleMenu" 
+      @indexRoute="menuIndex" 
+    />
+    <div class="my-4 containner text-center flex justify-between">
+      <div>
+        <img
+          class="cursor-pointer"
+          src="@/assets/image/navbar/Logo.svg"
+          alt="Logo"
+          @click="menuIndex"
+        />
+      </div>
 
-    <div class="w-11/12 mx-auto mt-4 flex justify-between">
-      <img
-        class="cursor-pointer"
-        src="@/assets/image/navbar/Logo.svg"
-        alt="Logo"
-        @click="menuIndex"
-      />
       <div class="flex gap-2">
-        <img v-if="user" src="@/assets/image/navbar/People.svg" alt="People" />
+        <img 
+          v-if="user" 
+          src="@/assets/image/navbar/People.svg" 
+          alt="People" 
+        />
 
         <img
           class="cursor-pointer"

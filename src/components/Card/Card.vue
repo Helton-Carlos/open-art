@@ -23,8 +23,13 @@ defineEmits<{
     </div>
 
     <div class="flex justify-between items-center" v-if="context">
-      <div class="flex my-2">
-        <img :src="imagePersona" :alt="title" data-testid="imagePersona-id" />
+      <div class="flex gap-2">
+        <img 
+          data-testid="imagePersona-id"
+          :src="imagePersona" 
+          :alt="title"  
+        />
+
         <div class="text-left pl-4">
           <p
             class="text-gray-dark font-extrabold text-md"
