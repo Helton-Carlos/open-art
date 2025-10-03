@@ -9,3 +9,64 @@ body {
   padding: 0px;
   box-sizing: border-box;
 }
+
+@theme {
+  --color-primary: #002EF1;
+  --color-secondary: #FFB802;
+  --color-warning: #FF6711;
+  --color-error: #FE3F61;
+  --color-success: #009846;
+  --color-white: #FFFFFF;
+  --color-green: #5ed5a8;
+  --color-yellow: #ffc82c;
+  --color-black: #14142B;
+  --color-gray: #999fae;
+  --color-gray-dark: #273444;
+  --color-gray-light: #F0F0F0;
+  --color-blue: #1fb6ff;
+  --color-purple: #7e5bef;
+  --color-pink: #ff49db;
+  --color-orange: #ff7849; 
+
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-serif: Merriweather, serif;
+
+  --breakpoint-sm: 650px;
+  --breakpoint-md: 960px;
+  --breakpoint-lg: 1280px;
+  --breakpoint-xl: 1440px;
+
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-xl: 1.3rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+}
+
+.btn-standard {
+  @apply bg-primary text-white;
+}
+
+.btn-secundary {
+  @apply bg-gray-light shadow-lg text-gray-dark py-1 px-4 rounded-3xl hover:bg-blue hover:transition-all;
+}
+
+.card {
+  @apply p-4 mb-4 bg-white rounded-lg shadow-lg;
+}
+
+.menu {
+  @apply w-full h-screen bg-white rounded-lg shadow-lg overflow-hidden;
+}
+
+.inputOn {
+  @apply w-full my-8 block pl-5 py-2 text-sm text-gray-dark border border-gray-light rounded-lg bg-gray-light focus:border-primary focus:ring-primary focus:outline-none
+}
+
+.inputOff{
+  @apply w-full my-8 block pl-5 py-2 text-sm text-error border border-gray-light rounded-lg bg-gray-light focus:border-error ring-error outline-none ring
+}
+
+.containner {
+  @apply w-11/12 mx-auto;
+}
