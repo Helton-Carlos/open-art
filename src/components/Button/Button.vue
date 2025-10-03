@@ -9,7 +9,7 @@ defineEmits<{ (e: "onClick"): void }>();
   <div>
     <button
       data-testid="btn-id"
-      class="px-7 py-1 rounded drop-shadow-md font-medium"
+      class="px-7 py-1 rounded drop-shadow-md font-medium cursor-pointer"
       :class="{
         'btn-standard': color == 'standard',
         underline: color == 'null',

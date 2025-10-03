@@ -50,7 +50,7 @@ const hotCard = computed<any>(() => {
       @update:model-value="search"
     />
 
-    <h3 class="my-4 text-left font-bold text-base">🎨 Art</h3>
+    <h2 class="subtitle">🎨 Art</h2>
 
     <div class="flex flex-wrap gap-2">
       <Card
@@ -69,9 +69,7 @@ const hotCard = computed<any>(() => {
       </p>
     </div>
 
-    <h2 class="text-left font-bold text-base py-4 flex">
-      <img src="@/assets/image/emoji/fire.png" alt="fire" class="pr-1" /> Hot bid
-    </h2>
+    <h2 class="subtitle">🔥 Hot bid</h2>
 
     <div class="w-full flex overflow-x-auto space-x-4">
       <div class="flex-shrink-0" v-for="card in hotCard" :key="card.id">

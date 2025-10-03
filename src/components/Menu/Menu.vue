@@ -35,6 +35,7 @@ const route = [
           alt="Logo"
           @click="$emit('indexRoute')"
         />
+
         <img
           class="cursor-pointer"
           src="@/assets/image/navbar/Close.svg"
@@ -43,19 +44,22 @@ const route = [
         />
       </div>
 
-      <div
-        class="flex justify-center pb-5 hover:text-primary"
+      <ul
+        class="mt-4"
         v-for="path in route"
+        :key="path.name"
       >
-        <p>
+        <li>
           <router-link
-            class="font-extrabold"
+           class="title-path"
             :to="path.route"
             @click="$emit('close')"
-            >{{ path.name }}</router-link
           >
-        </p>
-      </div>
+            {{ path.name }}
+          </router-link
+          >
+        </li>
+      </ul>
 
       <div class="flex justify-center flex-col mx-auto text-center">
         <Button

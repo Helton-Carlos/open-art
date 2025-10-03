@@ -64,8 +64,8 @@ pageTopScroll();
 
       <p class="text-left">{{ getCard.describe }}</p>
 
-      <div v-for="types in getCard.definitions" class="inline-block pr-1 pt-2">
-        <p class="border border-gray text-gray rounded-xl px-3 py-1">
+      <div v-for="types in getCard.definitions" :key="types" class="inline-block pr-1 pt-2">
+        <p class="tag">
           #{{ types }}
         </p>
       </div>
@@ -73,12 +73,12 @@ pageTopScroll();
       <div class="card mt-4">
         <h4 class="font-bold text-base">Reserve Price</h4>
 
-        <div class="flex items-center">
+        <div>
           <p class="font-bold text-xl py-4 pr-2">{{ getCard.value }} ETH</p>
 
-          <span class="font-bold text-gray text-base"
-            >${{ getCard.dolar }}</span
-          >
+          <p class="font-bold text-gray text-base">
+            R$ {{ getCard.dolar }}
+          </p>
         </div>
 
         <p class="pb-4">

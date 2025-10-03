@@ -31,6 +31,7 @@ const router = [
         <router-link
           class="hover:text-gray"
           v-for="path in router"
+          :key="path.name"
           :to="path.route"
           >{{ path.name }}</router-link
         >
@@ -39,6 +40,6 @@ const router = [
 
     <hr class="bg-gray" />
     
-    <span class="flex justify-center">© 2021 Openart</span>
+    <span class="flex justify-center">© 2025 Openart</span>
   </footer>
 </template>

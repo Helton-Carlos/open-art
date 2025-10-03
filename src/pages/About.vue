@@ -37,7 +37,11 @@ const miniCard = [
     <h4 class="text-left font-bold text-base py-4">How it work</h4>
 
     <div class="flex justify-center gap-2 md:gap-8">
-      <div class="card w-[150px]" v-for="card in miniCard">
+      <div 
+        class="card w-[150px]" 
+        v-for="card in miniCard" 
+        :key="card.name"
+      >
         <img class="flex" :src="card.image" :alt="card.name" />
         <p class="text-left font-bold">{{ card.name }}</p>
       </div>
